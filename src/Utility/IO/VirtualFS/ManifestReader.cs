@@ -26,6 +26,11 @@ namespace Utility.IO.VirtualFS
         private static readonly List<Assembly> _loadedAssemblies = new List<Assembly>();
         private static readonly List<string> _unpackedFiles = new List<string>();
 
+        public static bool IsRegistered(Assembly asm)
+        {
+            return _loadedAssemblies.Contains(asm);
+        }
+
         /// <summary>
         /// Loads an Assembly List file
         /// </summary>
