@@ -8,7 +8,7 @@ namespace Utility.DotNet
 
         public static readonly ProjectDebugConfig<LogType, Verbosity> Settings =
             new ProjectDebugConfig<LogType, Verbosity>(
-                                                       "OpenFL.Utility.DotNet",
+                                                       "Utility.DotNet",
                                                        LogType.All,
                                                        Verbosity.Level1,
                                                        PrefixLookupSettings.AddPrefixIfAvailable |

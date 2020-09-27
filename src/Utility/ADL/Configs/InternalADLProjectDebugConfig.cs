@@ -5,7 +5,7 @@
 
         public static readonly ProjectDebugConfig<LogType, Verbosity> Settings =
             new ProjectDebugConfig<LogType, Verbosity>(
-                                                       "OpenFL.Utility.ADL",
+                                                       "Utility.ADL",
                                                        LogType.All,
                                                        Verbosity.Level1,
                                                        PrefixLookupSettings.AddPrefixIfAvailable |

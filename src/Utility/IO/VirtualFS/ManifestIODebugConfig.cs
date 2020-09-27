@@ -8,7 +8,7 @@ namespace Utility.IO.VirtualFS
 
         public static readonly ProjectDebugConfig<LogType, Verbosity> Settings =
             new ProjectDebugConfig<LogType, Verbosity>(
-                                                       "OpenFL.Utility.ManifestIO",
+                                                       "Utility.ManifestIO",
                                                        LogType.All,
                                                        Verbosity.Level1,
                                                        PrefixLookupSettings.AddPrefixIfAvailable |

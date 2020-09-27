@@ -8,7 +8,7 @@ namespace Utility.CommandRunner
 
         public static readonly ProjectDebugConfig<LogType, Verbosity> Settings =
             new ProjectDebugConfig<LogType, Verbosity>(
-                                                       "OpenFL.Utility.CommandRunner",
+                                                       "Utility.CommandRunner",
                                                        LogType.All,
                                                        Verbosity.Level1,
                                                        PrefixLookupSettings.AddPrefixIfAvailable |

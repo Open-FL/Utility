@@ -13,7 +13,7 @@ namespace Utility.Exceptions
 
         public static readonly ProjectDebugConfig<LogType, Verbosity> Settings =
             new ProjectDebugConfig<LogType, Verbosity>(
-                                                       "OpenFL.Utility.Exceptions",
+                                                       "Utility.Exceptions",
                                                        LogType.All,
                                                        Verbosity.Level1,
                                                        PrefixLookupSettings.AddPrefixIfAvailable |
