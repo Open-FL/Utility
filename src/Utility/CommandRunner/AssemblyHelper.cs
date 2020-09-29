@@ -5,13 +5,13 @@ using System.Reflection;
 namespace Utility.CommandRunner
 {
     /// <summary>
-    /// Small Helper Class that is Handling The Assembly Loading/Getting the Commands from assemblies.
+    ///     Small Helper Class that is Handling The Assembly Loading/Getting the Commands from assemblies.
     /// </summary>
     internal static class AssemblyHelper
     {
 
         /// <summary>
-        /// Returns all Commands inside the Assembly
+        ///     Returns all Commands inside the Assembly
         /// </summary>
         /// <param name="asm">The Assembly to search</param>
         /// <returns></returns>
@@ -32,7 +32,7 @@ namespace Utility.CommandRunner
         }
 
         /// <summary>
-        /// Loads an assembly from path
+        ///     Loads an assembly from path
         /// </summary>
         /// <param name="path">Full Path to the Assembly.</param>
         /// <param name="asm">The Assembly that was loaded.</param>

@@ -6,13 +6,13 @@ using Utility.Exceptions;
 namespace Utility.IO.VirtualFS
 {
     /// <summary>
-    /// This exception gets thrown when the specified file was not found.
+    ///     This exception gets thrown when the specified file was not found.
     /// </summary>
     public class InvalidFilePathException : Byt3Exception
     {
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="filePath">The File that was not found</param>
         /// <param name="inner">Inner exeption</param>
@@ -26,7 +26,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="filePath">The File that was not found</param>
         public InvalidFilePathException(string filePath) : this(filePath, null)

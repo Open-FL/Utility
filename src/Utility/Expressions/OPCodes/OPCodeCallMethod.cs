@@ -9,58 +9,58 @@ using Utility.Expressions.Interfaces;
 namespace Utility.Expressions.OPCodes
 {
     /// <summary>
-    /// The OPCode Implementation that gets used when the Tokenizer Parsed a Function/Variable Call
+    ///     The OPCode Implementation that gets used when the Tokenizer Parsed a Function/Variable Call
     /// </summary>
     public class OPCodeCallMethod : OPCode
     {
 
         /// <summary>
-        /// The Object Instance Backing Field
+        ///     The Object Instance Backing Field
         /// </summary>
         private readonly object _baseObject;
 
         /// <summary>
-        /// The Evaluation Type of the Result
+        ///     The Evaluation Type of the Result
         /// </summary>
         private readonly EvalType _resultEvalType;
 
         /// <summary>
-        /// The Member Info of the Call Method
+        ///     The Member Info of the Call Method
         /// </summary>
         private readonly MemberInfo mMethod;
 
         /// <summary>
-        /// The Parameters of the Call
+        ///     The Parameters of the Call
         /// </summary>
         private readonly IEvalTypedValue[] mParams;
 
         /// <summary>
-        /// The Parameter Values of the Call
+        ///     The Parameter Values of the Call
         /// </summary>
         private readonly object[] mParamValues;
 
         /// <summary>
-        /// The Call Return Type
+        ///     The Call Return Type
         /// </summary>
         private readonly Type mResultSystemType;
 
         /// <summary>
-        /// The Base Value of the Call Method OPCode Backing Field
+        ///     The Base Value of the Call Method OPCode Backing Field
         /// </summary>
         private IEvalValue _baseValue; // for the events only
 
         /// <summary>
-        /// The Result Value Backing Field
+        ///     The Result Value Backing Field
         /// </summary>
         private IEvalValue _resultValue; // just for some
 
         /// <summary>
-        /// The Base Value Object
+        ///     The Base Value Object
         /// </summary>
         private object mBaseValueObject;
 
         /// <summary>
-        /// Internal Constructor
+        ///     Internal Constructor
         /// </summary>
         /// <param name="baseObject">The Base Object Instance</param>
         /// <param name="method">The Member Info</param>
@@ -173,7 +173,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The Base Value of the Call Method OPCode
+        ///     The Base Value of the Call Method OPCode
         /// </summary>
         private IEvalValue BaseValue
         {
@@ -197,7 +197,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The Result Value
+        ///     The Result Value
         /// </summary>
         private IEvalValue ResultValue
         {
@@ -221,7 +221,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Value Property.
+        ///     Value Property.
         /// </summary>
         public override object Value
         {
@@ -239,17 +239,17 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The Result System Type
+        ///     The Result System Type
         /// </summary>
         public override Type SystemType => mResultSystemType;
 
         /// <summary>
-        /// The Result Evaluator Type
+        ///     The Result Evaluator Type
         /// </summary>
         public override EvalType EvalType => _resultEvalType;
 
         /// <summary>
-        /// Creates a New OPCodeCallMethod Instance
+        ///     Creates a New OPCodeCallMethod Instance
         /// </summary>
         /// <param name="tokenizer">Tokenizer Instance</param>
         /// <param name="baseObject">The Base Object Instance</param>
@@ -271,7 +271,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns the Value from the Member info when it is a PropertyInfo
+        ///     Returns the Value from the Member info when it is a PropertyInfo
         /// </summary>
         /// <returns>Value</returns>
         private object GetProperty()
@@ -281,7 +281,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns the Value from the Member info when it is a MethodInfo
+        ///     Returns the Value from the Member info when it is a MethodInfo
         /// </summary>
         /// <returns>Value</returns>
         private object GetMethod()
@@ -291,7 +291,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns the Value from the Member info when it is a FieldInfo
+        ///     Returns the Value from the Member info when it is a FieldInfo
         /// </summary>
         /// <returns>Value</returns>
         private object GetField()
@@ -301,7 +301,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns the Value of the Call
+        ///     Returns the Value of the Call
         /// </summary>
         /// <returns>Value</returns>
         private object InternalValue()
@@ -325,7 +325,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Gets Invoked when the paramerters to the function call changed.
+        ///     Gets Invoked when the paramerters to the function call changed.
         /// </summary>
         /// <param name="sender">Sender of the Event</param>
         /// <param name="e">Event Args</param>
@@ -335,7 +335,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Gets Invoked when the baseVariable to the function call changed.
+        ///     Gets Invoked when the baseVariable to the function call changed.
         /// </summary>
         /// <param name="sender">Sender of the Event</param>
         /// <param name="e">Event Args</param>
@@ -345,7 +345,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Gets Invoked when the resultVariable to the function call changed.
+        ///     Gets Invoked when the resultVariable to the function call changed.
         /// </summary>
         /// <param name="sender">Sender of the Event</param>
         /// <param name="e">Event Args</param>

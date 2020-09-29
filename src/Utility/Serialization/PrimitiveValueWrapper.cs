@@ -4,23 +4,23 @@ using System.IO;
 namespace Utility.Serialization
 {
     /// <summary>
-    /// Simple Wrapper that Sequentially Read and Write Primitive Values to a Specified Stream
+    ///     Simple Wrapper that Sequentially Read and Write Primitive Values to a Specified Stream
     /// </summary>
     public class PrimitiveValueWrapper
     {
 
         /// <summary>
-        /// Packet Cache used to cache the written values
+        ///     Packet Cache used to cache the written values
         /// </summary>
         private readonly List<byte> packetCache = new List<byte>();
 
         /// <summary>
-        /// Underlaying Stream
+        ///     Underlaying Stream
         /// </summary>
         private readonly Stream stream;
 
         /// <summary>
-        /// Public Constructor
+        ///     Public Constructor
         /// </summary>
         /// <param name="s">Underlaying Stream</param>
         public PrimitiveValueWrapper(Stream s)
@@ -32,7 +32,7 @@ namespace Utility.Serialization
         public bool IsValid { get; private set; }
 
         /// <summary>
-        /// Reads an int from the Underlaying Stream
+        ///     Reads an int from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized int</returns>
         public int ReadInt()
@@ -58,7 +58,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads an uint from the Underlaying Stream
+        ///     Reads an uint from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized uint</returns>
         public uint ReadUInt()
@@ -74,7 +74,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads a long from the Underlaying Stream
+        ///     Reads a long from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized long</returns>
         public long ReadLong()
@@ -90,7 +90,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads an ulong from the Underlaying Stream
+        ///     Reads an ulong from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized ulong</returns>
         public ulong ReadULong()
@@ -106,7 +106,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads a short from the Underlaying Stream
+        ///     Reads a short from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized short</returns>
         public short ReadShort()
@@ -122,7 +122,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads an ushort from the Underlaying Stream
+        ///     Reads an ushort from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized ushort</returns>
         public ushort ReadUShort()
@@ -138,7 +138,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads a bool from the Underlaying Stream
+        ///     Reads a bool from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized bool</returns>
         public bool ReadBool()
@@ -154,7 +154,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads a float from the Underlaying Stream
+        ///     Reads a float from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized float</returns>
         public float ReadFloat()
@@ -170,7 +170,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads a double from the Underlaying Stream
+        ///     Reads a double from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized double</returns>
         public double ReadDouble()
@@ -181,7 +181,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads a string from the Underlaying Stream
+        ///     Reads a string from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized string</returns>
         public string ReadString()
@@ -203,7 +203,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads a Byte Array from the Underlaying Stream
+        ///     Reads a Byte Array from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized Byte Array</returns>
         public byte[] ReadBytes()
@@ -220,7 +220,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a Byte Array to the Stream
+        ///     Writes a Byte Array to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -251,7 +251,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes an int to the Stream
+        ///     Writes an int to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -268,7 +268,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes an uint to the Stream
+        ///     Writes an uint to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -285,7 +285,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a short to the Stream
+        ///     Writes a short to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -302,7 +302,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes an ushort to the Stream
+        ///     Writes an ushort to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -319,7 +319,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes an long to the Stream
+        ///     Writes an long to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -336,7 +336,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes an ulong to the Stream
+        ///     Writes an ulong to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -353,7 +353,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a sbyte to the Stream
+        ///     Writes a sbyte to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -370,7 +370,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a byte to the Stream
+        ///     Writes a byte to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -386,7 +386,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a bool to the Stream
+        ///     Writes a bool to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -403,7 +403,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a float to the Stream
+        ///     Writes a float to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -420,7 +420,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a double to the Stream
+        ///     Writes a double to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -437,7 +437,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a string to the Stream
+        ///     Writes a string to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -481,7 +481,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes the PacketCache to the Underlaying Stream.
+        ///     Writes the PacketCache to the Underlaying Stream.
         /// </summary>
         internal void CompleteWrite()
         {

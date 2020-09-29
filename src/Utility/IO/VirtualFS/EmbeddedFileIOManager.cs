@@ -8,8 +8,8 @@ using Utility.IO.Callbacks;
 namespace Utility.IO.VirtualFS
 {
     /// <summary>
-    /// Wrapper for Specific System.IO Calls
-    /// It will resolve the filename either with files from the disk or with files embedded in an assembly
+    ///     Wrapper for Specific System.IO Calls
+    ///     It will resolve the filename either with files from the disk or with files embedded in an assembly
     /// </summary>
     public class EmbeddedFileIOManager : IOCallback
     {
@@ -18,7 +18,7 @@ namespace Utility.IO.VirtualFS
             new ADLLogger<LogType>(ManifestIODebugConfig.Settings, "File IOManager");
 
         /// <summary>
-        /// Returns true if the file exists on either the disk or in the assembly
+        ///     Returns true if the file exists on either the disk or in the assembly
         /// </summary>
         /// <param name="filename"></param>
         /// <returns></returns>
@@ -30,7 +30,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Returns true if the folder exists on either the disk or in the assembly
+        ///     Returns true if the folder exists on either the disk or in the assembly
         /// </summary>
         /// <param name="foldername"></param>
         /// <returns></returns>
@@ -42,7 +42,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Reads all lines from the file provided
+        ///     Reads all lines from the file provided
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
@@ -52,7 +52,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Reads all Text from a file
+        ///     Reads all Text from a file
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
@@ -65,7 +65,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Returns files in a specfied directory
+        ///     Returns files in a specfied directory
         /// </summary>
         /// <param name="foldername"></param>
         /// <param name="searchPattern"></param>
@@ -96,7 +96,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Returns the byte stream of the file specified
+        ///     Returns the byte stream of the file specified
         /// </summary>
         /// <param name="filename"></param>
         /// <returns></returns>

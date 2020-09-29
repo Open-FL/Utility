@@ -1,158 +1,158 @@
 ﻿namespace Utility.Expressions.Enums
 {
     /// <summary>
-    /// Defines All Token Types that the Evaluator Understands
+    ///     Defines All Token Types that the Evaluator Understands
     /// </summary>
     public enum TokenType
     {
 
         /// <summary>
-        /// No Token Type
+        ///     No Token Type
         /// </summary>
         None,
 
         /// <summary>
-        /// End Of Formula Token
+        ///     End Of Formula Token
         /// </summary>
         EndOfFormula,
 
         /// <summary>
-        /// + Operator Token
+        ///     + Operator Token
         /// </summary>
         OperatorPlus,
 
         /// <summary>
-        /// -/– Operator Token
+        ///     -/– Operator Token
         /// </summary>
         OperatorMinus,
 
         /// <summary>
-        /// * Operator Token
+        ///     * Operator Token
         /// </summary>
         OperatorMul,
 
         /// <summary>
-        /// / Operator Token
+        ///     / Operator Token
         /// </summary>
         OperatorDiv,
 
         /// <summary>
-        /// % Operator Token
+        ///     % Operator Token
         /// </summary>
         OperatorPercent,
 
         /// <summary>
-        /// [ Operator Token
+        ///     [ Operator Token
         /// </summary>
         OpenParenthesis,
 
         /// <summary>
-        /// , Operator Token
+        ///     , Operator Token
         /// </summary>
         Comma,
 
         /// <summary>
-        /// . Operator Token
+        ///     . Operator Token
         /// </summary>
         Dot,
 
         /// <summary>
-        /// ] Operator Token
+        ///     ] Operator Token
         /// </summary>
         CloseParenthesis,
 
         /// <summary>
-        /// != Operator Token
+        ///     != Operator Token
         /// </summary>
         OperatorNe,
 
         /// <summary>
-        /// &gt; Operator Token
+        ///     &gt; Operator Token
         /// </summary>
         OperatorGt,
 
         /// <summary>
-        /// >= Operator Token
+        ///     >= Operator Token
         /// </summary>
         OperatorGe,
 
         /// <summary>
-        /// = Operator Token
+        ///     = Operator Token
         /// </summary>
         OperatorEq,
 
         /// <summary>
-        /// &lt;= Operator Token
+        ///     &lt;= Operator Token
         /// </summary>
         OperatorLe,
 
         /// <summary>
-        /// &lt; Operator Token
+        ///     &lt; Operator Token
         /// </summary>
         OperatorLt,
 
         /// <summary>
-        /// and Operator Token
+        ///     and Operator Token
         /// </summary>
         OperatorAnd,
 
         /// <summary>
-        /// or Operator Token
+        ///     or Operator Token
         /// </summary>
         OperatorOr,
 
         /// <summary>
-        /// not Operator Token
+        ///     not Operator Token
         /// </summary>
         OperatorNot,
 
         /// <summary>
-        /// (and) Operator Token
+        ///     (and) Operator Token
         /// </summary>
         OperatorConcat,
 
         /// <summary>
-        /// if Operator Token
+        ///     if Operator Token
         /// </summary>
         OperatorIf,
 
         /// <summary>
-        /// Default Operator Token
+        ///     Default Operator Token
         /// </summary>
         ValueIdentifier,
 
         /// <summary>
-        /// true/yes Operator Token
+        ///     true/yes Operator Token
         /// </summary>
         ValueTrue,
 
         /// <summary>
-        /// false/no Operator Token
+        ///     false/no Operator Token
         /// </summary>
         ValueFalse,
 
         /// <summary>
-        /// Number Operator token
+        ///     Number Operator token
         /// </summary>
         ValueNumber,
 
         /// <summary>
-        /// "/' Operator Token
+        ///     "/' Operator Token
         /// </summary>
         ValueString,
 
         /// <summary>
-        /// # Operator Token
+        ///     # Operator Token
         /// </summary>
         ValueDate,
 
         /// <summary>
-        /// ( Operator Token
+        ///     ( Operator Token
         /// </summary>
         OpenBracket,
 
         /// <summary>
-        /// ) Operator Token
+        ///     ) Operator Token
         /// </summary>
         CloseBracket
 

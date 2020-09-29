@@ -11,6 +11,8 @@ using Utility.ExtPP.Base.Plugins;
 using Utility.ExtPP.Base.settings;
 using Utility.FastString;
 
+using Utils = Utility.ExtPP.Base.Utils;
+
 namespace Utility.ExtPP.Plugins
 {
     public class TextEncoderPlugin : AbstractFullScriptPlugin
@@ -137,7 +139,7 @@ namespace Utility.ExtPP.Plugins
 
             if (data.Length > 1)
             {
-                parameter = Base.Utils.SplitAndRemoveFirst(data.Unpack(" "), " ");
+                parameter = Utils.SplitAndRemoveFirst(data.Unpack(" "), " ");
             }
 
 

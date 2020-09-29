@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -78,7 +79,7 @@ namespace Utility.ADL
         public static Encoding TextEncoding { get; set; } = Encoding.ASCII;
 
         /// <summary>
-        /// The format ADL uses to convert a Time to a string representation
+        ///     The format ADL uses to convert a Time to a string representation
         /// </summary>
         public static string TimeFormatString { get; set; }
 
@@ -535,7 +536,7 @@ namespace Utility.ADL
             }
 
             LoadConfig((ADLConfig) new ADLConfig().GetStandard());
-            LogTextStream lts = new LogTextStream(System.Console.OpenStandardOutput());
+            LogTextStream lts = new LogTextStream(Console.OpenStandardOutput());
             AddOutputStream(lts);
         }
 

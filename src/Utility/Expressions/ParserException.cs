@@ -3,23 +3,23 @@
 namespace Utility.Expressions
 {
     /// <summary>
-    /// Gets thrown when the Evaluator encounters an Error
+    ///     Gets thrown when the Evaluator encounters an Error
     /// </summary>
     public class ParserException : Exception
     {
 
         /// <summary>
-        /// The Formula that failed to parse
+        ///     The Formula that failed to parse
         /// </summary>
         public readonly string Formula;
 
         /// <summary>
-        /// The Index in the Formula where the parser went wrong
+        ///     The Index in the Formula where the parser went wrong
         /// </summary>
         public readonly int Pos;
 
         /// <summary>
-        /// Internal Constructor
+        ///     Internal Constructor
         /// </summary>
         /// <param name="str">The Error Message</param>
         /// <param name="formula">The Formula that failed to parse</param>

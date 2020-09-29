@@ -3,7 +3,7 @@
 namespace Utility.ExtPP.API
 {
     /// <summary>
-    /// File Content that is used as an abstraction to files
+    ///     File Content that is used as an abstraction to files
     /// </summary>
     public class FileContent : IFileContent
     {

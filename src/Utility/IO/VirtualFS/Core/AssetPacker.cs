@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 namespace Utility.IO.VirtualFS.Core
 {
     /// <summary>
-    /// Main Class that is used to interface with the Asset Packaging Library
+    ///     Main Class that is used to interface with the Asset Packaging Library
     /// </summary>
     public static class AssetPacker
     {

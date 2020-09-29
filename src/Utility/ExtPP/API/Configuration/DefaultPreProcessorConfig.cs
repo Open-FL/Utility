@@ -7,7 +7,7 @@ using Utility.ExtPP.Plugins;
 namespace Utility.ExtPP.API.Configuration
 {
     /// <summary>
-    /// The Default PreProcessor Configuration
+    ///     The Default PreProcessor Configuration
     /// </summary>
     public class DefaultPreProcessorConfig : APreProcessorConfig
     {

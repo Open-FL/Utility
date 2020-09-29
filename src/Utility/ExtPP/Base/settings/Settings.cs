@@ -8,12 +8,12 @@ namespace Utility.ExtPP.Base.settings
     {
 
         /// <summary>
-        /// Dictionary to store the settings for processing
+        ///     Dictionary to store the settings for processing
         /// </summary>
         private readonly Dictionary<string, string[]> settings;
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="settings">The settings in dictionary form</param>
         public Settings(Dictionary<string, string[]> settings)
@@ -22,19 +22,19 @@ namespace Utility.ExtPP.Base.settings
         }
 
         /// <summary>
-        /// Default Constructor
+        ///     Default Constructor
         /// </summary>
         public Settings() : this(null)
         {
         }
 
         /// <summary>
-        /// Settings with this prefix will be forwarded to any plugin in the chain
+        ///     Settings with this prefix will be forwarded to any plugin in the chain
         /// </summary>
         public static string GlobalSettings { get; } = "glob";
 
         /// <summary>
-        /// Sets values in the settings
+        ///     Sets values in the settings
         /// </summary>
         /// <param name="key">The key to be set</param>
         /// <param name="value">the value that will be set</param>
@@ -51,7 +51,7 @@ namespace Utility.ExtPP.Base.settings
         }
 
         /// <summary>
-        /// Sets a value in the settings
+        ///     Sets a value in the settings
         /// </summary>
         /// <param name="key">the key to be set</param>
         /// <param name="value">the value to be set</param>
@@ -61,7 +61,7 @@ namespace Utility.ExtPP.Base.settings
         }
 
         /// <summary>
-        /// returns the "first" value of the key
+        ///     returns the "first" value of the key
         /// </summary>
         /// <param name="key">the key to be checked</param>
         /// <returns>the first entry of the value array</returns>
@@ -71,7 +71,7 @@ namespace Utility.ExtPP.Base.settings
         }
 
         /// <summary>
-        /// Returns true if the settings contain this key
+        ///     Returns true if the settings contain this key
         /// </summary>
         /// <param name="key">the key to be checked</param>
         /// <returns>true if the key is contained.</returns>
@@ -82,7 +82,7 @@ namespace Utility.ExtPP.Base.settings
 
 
         /// <summary>
-        /// returns the settings for the specified key
+        ///     returns the settings for the specified key
         /// </summary>
         /// <param name="key">the key to be used</param>
         /// <returns>the value array of the specified key</returns>
@@ -93,7 +93,7 @@ namespace Utility.ExtPP.Base.settings
 
 
         /// <summary>
-        /// Returns the settings that have a prefix(e.g. are used in plugins)
+        ///     Returns the settings that have a prefix(e.g. are used in plugins)
         /// </summary>
         /// <param name="prefixes">The prefixes that will be included</param>
         /// <param name="includeGlobalConfig">flag to optionally also include settings with global prefix</param>
@@ -115,7 +115,7 @@ namespace Utility.ExtPP.Base.settings
         }
 
         /// <summary>
-        /// Returns the settings that have a prefix(e.g. are used in plugins)
+        ///     Returns the settings that have a prefix(e.g. are used in plugins)
         /// </summary>
         /// <param name="prefixes">The prefixes that will be included</param>
         /// <returns>The Settings object only containing settings with the specified prefixes(prefixes are removed)</returns>
@@ -125,7 +125,7 @@ namespace Utility.ExtPP.Base.settings
         }
 
         /// <summary>
-        /// Returns a setting object that contains the settings with prefix.
+        ///     Returns a setting object that contains the settings with prefix.
         /// </summary>
         /// <param name="prefix">The prefix that will be included</param>
         /// <param name="argBegin">the char sequence used to detect prefixes</param>
@@ -150,7 +150,7 @@ namespace Utility.ExtPP.Base.settings
 
 
         /// <summary>
-        /// Wrapper that returns the settings of the prefix.
+        ///     Wrapper that returns the settings of the prefix.
         /// </summary>
         /// <param name="prefix">The prefix that will be included</param>
         /// <param name="includeShared">a flag to optionally include settings with the global prefix</param>
@@ -163,7 +163,7 @@ namespace Utility.ExtPP.Base.settings
         }
 
         /// <summary>
-        /// Wrapper that returns the settings of the prefix.
+        ///     Wrapper that returns the settings of the prefix.
         /// </summary>
         /// <param name="prefix">The prefix that will be included</param>
         /// <returns></returns>
@@ -173,7 +173,7 @@ namespace Utility.ExtPP.Base.settings
         }
 
         /// <summary>
-        /// A function that returns the settings for a specific command.
+        ///     A function that returns the settings for a specific command.
         /// </summary>
         /// <param name="c">The command info to be checked</param>
         /// <returns>the value array corresponding to the command info object</returns>
@@ -194,8 +194,8 @@ namespace Utility.ExtPP.Base.settings
         }
 
         /// <summary>
-        /// Applies the settings with matching command infos.
-        /// Using reflection and fieldinfos to set the values
+        ///     Applies the settings with matching command infos.
+        ///     Using reflection and fieldinfos to set the values
         /// </summary>
         /// <param name="infos">The Command infos that the settings will be applied to</param>
         /// <param name="obj">The object that the reflection will set the value in</param>
@@ -216,8 +216,8 @@ namespace Utility.ExtPP.Base.settings
 
 
         /// <summary>
-        /// Applies the first index of the setting. and saves it in the fieldinfo in the command object.
-        /// Automatically converts strings to almost all parsable objects
+        ///     Applies the first index of the setting. and saves it in the fieldinfo in the command object.
+        ///     Automatically converts strings to almost all parsable objects
         /// </summary>
         /// <param name="t">The type of the property to be set</param>
         /// <param name="info">the command info</param>
@@ -235,8 +235,8 @@ namespace Utility.ExtPP.Base.settings
         }
 
         /// <summary>
-        /// Applies the settings. and saves it in the fieldinfo in the command objects.
-        /// Automatically converts strings and arrays to almost all parsable objects
+        ///     Applies the settings. and saves it in the fieldinfo in the command objects.
+        ///     Automatically converts strings and arrays to almost all parsable objects
         /// </summary>
         /// <param name="info">the command info</param>
         /// <param name="obj">the class containing the property info of the commandinfo object</param>
@@ -261,10 +261,13 @@ namespace Utility.ExtPP.Base.settings
 
 
         /// <summary>
-        /// Merges two settings objects.
+        ///     Merges two settings objects.
         /// </summary>
         /// <param name="other">The other settings object that will be merged with this object</param>
-        /// <returns>A merges settings object that will contain all the values of both settings objects.(Other settings will overwrite the settings of this object.)</returns>
+        /// <returns>
+        ///     A merges settings object that will contain all the values of both settings objects.(Other settings will
+        ///     overwrite the settings of this object.)
+        /// </returns>
         public Settings Merge(Settings other)
         {
             Settings s = new Settings(new Dictionary<string, string[]>(settings));

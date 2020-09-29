@@ -3,23 +3,23 @@
 namespace Utility.ExtPP.Base.Interfaces
 {
     /// <summary>
-    /// A data object that is used to hold information about the sourcescript file and key
+    ///     A data object that is used to hold information about the sourcescript file and key
     /// </summary>
     public class ImportResult
     {
 
         /// <summary>
-        /// The underlying data structure that is used to hold the custom data
+        ///     The underlying data structure that is used to hold the custom data
         /// </summary>
         private readonly Dictionary<string, object> data = new Dictionary<string, object>();
 
         /// <summary>
-        /// A flag indicating the success state of the Import Operation
+        ///     A flag indicating the success state of the Import Operation
         /// </summary>
         private bool result;
 
         /// <summary>
-        /// Sets a key value pair.
+        ///     Sets a key value pair.
         /// </summary>
         /// <param name="key">The key to be set</param>
         /// <param name="value">the value that will be set</param>
@@ -36,7 +36,7 @@ namespace Utility.ExtPP.Base.Interfaces
         }
 
         /// <summary>
-        /// Returns a value from the custom data
+        ///     Returns a value from the custom data
         /// </summary>
         /// <param name="key">the key of the value</param>
         /// <returns>the object</returns>
@@ -46,7 +46,7 @@ namespace Utility.ExtPP.Base.Interfaces
         }
 
         /// <summary>
-        /// Returns a value from the custom data
+        ///     Returns a value from the custom data
         /// </summary>
         /// <param name="key">the key of the value</param>
         /// <returns>the object cast to string</returns>
@@ -56,7 +56,7 @@ namespace Utility.ExtPP.Base.Interfaces
         }
 
         /// <summary>
-        /// Sets the result of the operation
+        ///     Sets the result of the operation
         /// </summary>
         /// <param name="result">the result</param>
         public void SetResult(bool result)
@@ -65,7 +65,7 @@ namespace Utility.ExtPP.Base.Interfaces
         }
 
         /// <summary>
-        /// Checks the Custom data for a specific key
+        ///     Checks the Custom data for a specific key
         /// </summary>
         /// <param name="key">The key to be checked</param>
         /// <returns>True if the key is contained in the data</returns>
@@ -75,7 +75,7 @@ namespace Utility.ExtPP.Base.Interfaces
         }
 
         /// <summary>
-        /// Removes an entry from the data
+        ///     Removes an entry from the data
         /// </summary>
         /// <param name="key">the key to be removed</param>
         public void RemoveEntry(string key)
@@ -87,7 +87,7 @@ namespace Utility.ExtPP.Base.Interfaces
         }
 
         /// <summary>
-        /// Implicit operator to convert to bool
+        ///     Implicit operator to convert to bool
         /// </summary>
         /// <param name="obj">The object to be converted</param>
         public static implicit operator bool(ImportResult obj)

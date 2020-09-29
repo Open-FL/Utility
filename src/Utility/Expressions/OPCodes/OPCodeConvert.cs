@@ -10,23 +10,23 @@ using Utility.Expressions.Interfaces;
 namespace Utility.Expressions.OPCodes
 {
     /// <summary>
-    /// Implements Conversions between different Types
+    ///     Implements Conversions between different Types
     /// </summary>
     internal class OPCodeConvert : OPCode
     {
 
         /// <summary>
-        /// The Evaluation Type of the Parameter Backing Field
+        ///     The Evaluation Type of the Parameter Backing Field
         /// </summary>
         private readonly EvalType mEvalType = EvalType.Unknown;
 
         /// <summary>
-        /// The First parameter Backing Field
+        ///     The First parameter Backing Field
         /// </summary>
         private IEvalTypedValue _param1;
 
         /// <summary>
-        /// Public Constructor
+        ///     Public Constructor
         /// </summary>
         /// <param name="tokenizer">Tokenizer Instance</param>
         /// <param name="param1">The First Parameter</param>
@@ -78,7 +78,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The First Parameter
+        ///     The First Parameter
         /// </summary>
         private IEvalTypedValue Param1
         {
@@ -103,12 +103,12 @@ namespace Utility.Expressions.OPCodes
 
 
         /// <summary>
-        /// The Evaluation Type of the Parameter
+        ///     The Evaluation Type of the Parameter
         /// </summary>
         public override EvalType EvalType => mEvalType;
 
         /// <summary>
-        /// returns the Parameter as Boolean
+        ///     returns the Parameter as Boolean
         /// </summary>
         /// <returns>Boolean Value</returns>
         private object TBool()
@@ -117,7 +117,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// returns the Parameter as DateTime
+        ///     returns the Parameter as DateTime
         /// </summary>
         /// <returns>DateTime Value</returns>
         private object TDate()
@@ -126,7 +126,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// returns the Parameter as Double
+        ///     returns the Parameter as Double
         /// </summary>
         /// <returns>Double Value</returns>
         private object TNum()
@@ -135,7 +135,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// returns the Parameter as String
+        ///     returns the Parameter as String
         /// </summary>
         /// <returns>String Value</returns>
         private object TStr()
@@ -145,7 +145,7 @@ namespace Utility.Expressions.OPCodes
 
 
         /// <summary>
-        /// Gets Invoked when the parameter Value changes.
+        ///     Gets Invoked when the parameter Value changes.
         /// </summary>
         /// <param name="sender">The Sender of the Event</param>
         /// <param name="e">The Event Args</param>

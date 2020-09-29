@@ -5,18 +5,18 @@
 namespace Utility.Expressions.Interfaces
 {
     /// <summary>
-    /// The IEvalValue defines a Value and Value Changed Event Handler Properties
+    ///     The IEvalValue defines a Value and Value Changed Event Handler Properties
     /// </summary>
     public interface IEvalValue
     {
 
         /// <summary>
-        /// The Value of the Object
+        ///     The Value of the Object
         /// </summary>
         object Value { get; }
 
         /// <summary>
-        /// Value Changed Event
+        ///     Value Changed Event
         /// </summary>
         event ValueChangedEventHandler ValueChanged;
 

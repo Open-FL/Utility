@@ -11,7 +11,7 @@ using Utility.ExtPP.Base.Interfaces;
 namespace Utility.ExtPP.API
 {
     /// <summary>
-    /// A static Wrapper class around the ext_pp project.
+    ///     A static Wrapper class around the ext_pp project.
     /// </summary>
     public static class TextProcessorAPI
     {
@@ -118,7 +118,7 @@ namespace Utility.ExtPP.API
 
 
         /// <summary>
-        /// Loads and preprocesses the file specified
+        ///     Loads and preprocesses the file specified
         /// </summary>
         /// <param name="filename">the filepath</param>
         /// <param name="defs">definitions</param>

@@ -1,7 +1,7 @@
 ﻿namespace Utility.IO.VirtualFS.Core
 {
     /// <summary>
-    /// Contains the Package Type of a specific file
+    ///     Contains the Package Type of a specific file
     /// </summary>
     public class AssetFileInfo
     {

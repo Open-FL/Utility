@@ -1,7 +1,7 @@
 ﻿namespace Utility.ExtPP.Base.Interfaces
 {
     /// <summary>
-    /// Defines the scheme on how the keys for identifying scripts get created.
+    ///     Defines the scheme on how the keys for identifying scripts get created.
     /// </summary>
     /// <param name="var"></param>
     /// <param name="currentPath"></param>

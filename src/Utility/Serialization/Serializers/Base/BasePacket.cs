@@ -1,14 +1,14 @@
 ﻿namespace Utility.Serialization.Serializers.Base
 {
     /// <summary>
-    /// Base Packet is the base for the Serialization Library.
-    /// All Serialized Objects will be wrapped into this packet.
+    ///     Base Packet is the base for the Serialization Library.
+    ///     All Serialized Objects will be wrapped into this packet.
     /// </summary>
     public class BasePacket
     {
 
         /// <summary>
-        /// Public Constructor
+        ///     Public Constructor
         /// </summary>
         /// <param name="packetType">Custom Packet Key</param>
         /// <param name="payload">Serialized Packet Data</param>
@@ -19,12 +19,12 @@
         }
 
         /// <summary>
-        /// Custom Key that is used to determine the type of the Packet
+        ///     Custom Key that is used to determine the type of the Packet
         /// </summary>
         public object PacketType { get; }
 
         /// <summary>
-        /// Serialized Packet that this Base Packet is wrapping around
+        ///     Serialized Packet that this Base Packet is wrapping around
         /// </summary>
         public byte[] Payload { get; }
 

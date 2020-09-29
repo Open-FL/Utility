@@ -3,7 +3,7 @@
 namespace Utility.IO.VirtualFS.Core
 {
     /// <summary>
-    /// Assembly File Class that is used when the pack file is on disk
+    ///     Assembly File Class that is used when the pack file is on disk
     /// </summary>
     public class IoPackedAssemblyFile : AssemblyFile
     {

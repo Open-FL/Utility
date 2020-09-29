@@ -1,7 +1,7 @@
 ﻿namespace Utility.ExtPP.Base.settings
 {
     /// <summary>
-    /// An enum that specifies the type of plugin.
+    ///     An enum that specifies the type of plugin.
     /// </summary>
     public enum PluginType
     {

@@ -8,38 +8,38 @@ using Utility.Expressions.Interfaces;
 namespace Utility.Expressions.OPCodes
 {
     /// <summary>
-    /// Opcode that implements ArrayEntries
+    ///     Opcode that implements ArrayEntries
     /// </summary>
     public class OPCodeGetArrayEntry : OPCode
     {
 
         /// <summary>
-        /// The Parameters of the Array Indexer
+        ///     The Parameters of the Array Indexer
         /// </summary>
         private readonly IEvalTypedValue[] mParams;
 
         /// <summary>
-        /// The Result Evaluation Type Backing Field
+        ///     The Result Evaluation Type Backing Field
         /// </summary>
         private readonly EvalType mResultEvalType;
 
         /// <summary>
-        /// The Result System Type Backing Field
+        ///     The Result System Type Backing Field
         /// </summary>
         private readonly Type mResultSystemType;
 
         /// <summary>
-        /// The Values of the Parameters
+        ///     The Values of the Parameters
         /// </summary>
         private readonly int[] mValues;
 
         /// <summary>
-        /// The Array Backing Field
+        ///     The Array Backing Field
         /// </summary>
         private OPCode _array;
 
         /// <summary>
-        /// Public Constructor
+        ///     Public Constructor
         /// </summary>
         /// <param name="array">Array to Index</param>
         /// <param name="params">The Parameter of the Index Operation</param>
@@ -56,7 +56,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The Array
+        ///     The Array
         /// </summary>
         private OPCode Array
         {
@@ -80,7 +80,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The Object in the array at the specified index.
+        ///     The Object in the array at the specified index.
         /// </summary>
         public override object Value
         {
@@ -99,18 +99,18 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The System Type
+        ///     The System Type
         /// </summary>
         public override Type SystemType => mResultSystemType;
 
         /// <summary>
-        /// The Evaluation Type
+        ///     The Evaluation Type
         /// </summary>
         public override EvalType EvalType => mResultEvalType;
 
 
         /// <summary>
-        /// Gets Invoked when the baseVariable changes.
+        ///     Gets Invoked when the baseVariable changes.
         /// </summary>
         /// <param name="sender">The Sender of the Event</param>
         /// <param name="e">The Event Args</param>

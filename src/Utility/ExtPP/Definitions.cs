@@ -7,18 +7,18 @@ using Utility.ExtPP.Base.Interfaces;
 namespace Utility.ExtPP
 {
     /// <summary>
-    /// Contains the Values on what is Defined as a Variable when Processing the text
+    ///     Contains the Values on what is Defined as a Variable when Processing the text
     /// </summary>
     public class Definitions : ALoggable<LogType>, IDefinitions
     {
 
         /// <summary>
-        /// Dictionary to keep track of what is defined and what is not
+        ///     Dictionary to keep track of what is defined and what is not
         /// </summary>
         private readonly Dictionary<string, bool> definitions;
 
         /// <summary>
-        /// Convenience Wrapper
+        ///     Convenience Wrapper
         /// </summary>
         public Definitions() : this(new Dictionary<string, bool>())
         {
@@ -26,7 +26,7 @@ namespace Utility.ExtPP
 
 
         /// <summary>
-        /// Creates a Definitions Object with predefined definitions
+        ///     Creates a Definitions Object with predefined definitions
         /// </summary>
         /// <param name="definitions">the predefined definitions</param>
         public Definitions(Dictionary<string, bool> definitions) : base(ExtPPDebugConfig.Settings)
@@ -35,7 +35,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Set an array of definitions to true
+        ///     Set an array of definitions to true
         /// </summary>
         /// <param name="keys">The keys that will be set</param>
         public void Set(string[] keys)
@@ -47,7 +47,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Set an array of definitions to false
+        ///     Set an array of definitions to false
         /// </summary>
         /// <param name="keys">The keys that will be unset</param>
         public void Unset(string[] keys)
@@ -59,7 +59,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Set a specific definition to true
+        ///     Set a specific definition to true
         /// </summary>
         /// <param name="key">The key that will be set</param>
         public void Set(string key)
@@ -69,7 +69,7 @@ namespace Utility.ExtPP
 
 
         /// <summary>
-        /// Set a specific definition to false
+        ///     Set a specific definition to false
         /// </summary>
         /// <param name="key">The key that will be unset</param>
         public void Unset(string key)
@@ -78,7 +78,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Returns true if the definition is "set" and returns false if the definition is "unset"
+        ///     Returns true if the definition is "set" and returns false if the definition is "unset"
         /// </summary>
         /// <param name="key">The key to be checked</param>
         /// <returns>returns true when the key is set.</returns>
@@ -89,7 +89,7 @@ namespace Utility.ExtPP
 
 
         /// <summary>
-        /// Change the definition state.
+        ///     Change the definition state.
         /// </summary>
         /// <param name="key">definition name</param>
         /// <param name="state">The state of the key</param>

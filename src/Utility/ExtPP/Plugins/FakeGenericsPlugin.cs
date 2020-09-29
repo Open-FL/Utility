@@ -10,6 +10,8 @@ using Utility.ExtPP.Base.Plugins;
 using Utility.ExtPP.Base.settings;
 using Utility.FastString;
 
+using Utils = Utility.ExtPP.Base.Utils;
+
 namespace Utility.ExtPP.Plugins
 {
     public class FakeGenericsPlugin : AbstractFullScriptPlugin
@@ -83,7 +85,7 @@ namespace Utility.ExtPP.Plugins
 
             string filePath = "";
 
-            if (!Base.Utils.TryResolvePathIncludeParameter(vars))
+            if (!Utils.TryResolvePathIncludeParameter(vars))
             {
                 return ret;
             }
@@ -127,11 +129,11 @@ namespace Utility.ExtPP.Plugins
                                $"Replacing Keyword {GenericKeyword}{i} with {genParams[i]} in file {file.GetKey()}",
                                PLUGIN_MIN_SEVERITY + 1
                               );
-                    Base.Utils.ReplaceKeyWord(
-                                              file.GetSource(),
-                                              genParams[i],
-                                              GenericKeyword + i
-                                             );
+                    Utils.ReplaceKeyWord(
+                                         file.GetSource(),
+                                         genParams[i],
+                                         GenericKeyword + i
+                                        );
                 }
             }
 

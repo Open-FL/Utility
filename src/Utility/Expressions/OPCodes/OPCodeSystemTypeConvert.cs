@@ -7,23 +7,23 @@ using Utility.Expressions.Interfaces;
 namespace Utility.Expressions.OPCodes
 {
     /// <summary>
-    /// Implements Conversions from System Type to System Type by using Reflection
+    ///     Implements Conversions from System Type to System Type by using Reflection
     /// </summary>
     internal class OPCodeSystemTypeConvert : OPCode
     {
 
         /// <summary>
-        /// The Evaluation Type Backing Field
+        ///     The Evaluation Type Backing Field
         /// </summary>
         private readonly EvalType mEvalType = EvalType.Unknown;
 
         /// <summary>
-        /// The System Type Backing Field
+        ///     The System Type Backing Field
         /// </summary>
         private readonly Type mSystemType;
 
         /// <summary>
-        /// The Parameter Backing Field
+        ///     The Parameter Backing Field
         /// </summary>
         private IEvalTypedValue _param1;
 
@@ -36,7 +36,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The Parameter
+        ///     The Parameter
         /// </summary>
         private IEvalTypedValue Param1
         {
@@ -60,17 +60,17 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The Evaluation Type
+        ///     The Evaluation Type
         /// </summary>
         public override EvalType EvalType => mEvalType;
 
         /// <summary>
-        /// The System Type
+        ///     The System Type
         /// </summary>
         public override Type SystemType => mSystemType;
 
         /// <summary>
-        /// Converts the Parameter Value into the Specified System Type
+        ///     Converts the Parameter Value into the Specified System Type
         /// </summary>
         /// <returns>Parameter Value as Type mSystemType</returns>
         private object CType()
@@ -79,7 +79,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Gets Invoked when the parameter value changes.
+        ///     Gets Invoked when the parameter value changes.
         /// </summary>
         /// <param name="sender">The Sender of the Event</param>
         /// <param name="e">The Event Args</param>

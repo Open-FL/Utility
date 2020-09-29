@@ -4,13 +4,13 @@ using System.Linq;
 namespace Utility.ExtPP.Base
 {
     /// <summary>
-    /// The Extension class contains a multitude of useful operations on arrays and strings.
+    ///     The Extension class contains a multitude of useful operations on arrays and strings.
     /// </summary>
     public static class Extensions
     {
 
         /// <summary>
-        /// Creates a sub array starting from 0 to length
+        ///     Creates a sub array starting from 0 to length
         /// </summary>
         /// <typeparam name="T">Type</typeparam>
         /// <param name="arr">Source array</param>
@@ -23,7 +23,7 @@ namespace Utility.ExtPP.Base
 
 
         /// <summary>
-        /// Creates a sub array starting from start to start+length
+        ///     Creates a sub array starting from start to start+length
         /// </summary>
         /// <typeparam name="T">Type</typeparam>
         /// <param name="arr">Source array</param>

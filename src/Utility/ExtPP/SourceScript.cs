@@ -10,22 +10,22 @@ namespace Utility.ExtPP
     {
 
         /// <summary>
-        /// The full filepath of the script
+        ///     The full filepath of the script
         /// </summary>
         private readonly IFileContent filepath;
 
         /// <summary>
-        /// A Cache that is shared with all plugins to exchange information between different processing steps
+        ///     A Cache that is shared with all plugins to exchange information between different processing steps
         /// </summary>
         private readonly ImportResult importInfo;
 
         /// <summary>
-        /// if the source was requested at least once, it remains cached in here
+        ///     if the source was requested at least once, it remains cached in here
         /// </summary>
         private string[] source;
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="separator">the separator used.</param>
         /// <param name="path">the path to the file</param>
@@ -42,20 +42,20 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Flag to check if the file was already loaded into memory
+        ///     Flag to check if the file was already loaded into memory
         /// </summary>
         public bool IsSourceLoaded => source != null;
 
 
         /// <summary>
-        /// The key that will get assigned to this script.
+        ///     The key that will get assigned to this script.
         /// </summary>
         private string Key => filepath.GetKey();
 
         public bool IsInline { get; }
 
         /// <summary>
-        /// Returns the full filepath of this script.
+        ///     Returns the full filepath of this script.
         /// </summary>
         /// <returns>the filepath of the source</returns>
         public IFileContent GetFileInterface()
@@ -65,7 +65,7 @@ namespace Utility.ExtPP
 
 
         /// <summary>
-        /// Returns the key that got assigned to the script
+        ///     Returns the key that got assigned to the script
         /// </summary>
         /// <returns>the key of the file/source</returns>
         public string GetKey()
@@ -74,8 +74,8 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// returns the source that is cached
-        /// if the source was not loaded before it will load it from the file path specified
+        ///     returns the source that is cached
+        ///     if the source was not loaded before it will load it from the file path specified
         /// </summary>
         /// <returns>the source of the file</returns>
         public string[] GetSource()
@@ -89,7 +89,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Sets the cached version of the source
+        ///     Sets the cached version of the source
         /// </summary>
         /// <param name="source">the updated source</param>
         public void SetSource(string[] source)
@@ -99,7 +99,7 @@ namespace Utility.ExtPP
 
 
         /// <summary>
-        /// Returns true if the plugin cache contains an item of type T with key
+        ///     Returns true if the plugin cache contains an item of type T with key
         /// </summary>
         /// <typeparam name="T">The type to be checked for</typeparam>
         /// <param name="key">the key that is checked.</param>
@@ -110,7 +110,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Returns the value of type T with key.
+        ///     Returns the value of type T with key.
         /// </summary>
         /// <typeparam name="T">The typy of the value</typeparam>
         /// <param name="key">the key of the corresponding value</param>
@@ -121,7 +121,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Adds a value to the plugin cache to be read later during the processing
+        ///     Adds a value to the plugin cache to be read later during the processing
         /// </summary>
         /// <param name="key">the key</param>
         /// <param name="value">the value</param>
@@ -131,7 +131,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Loads the source code of the file into memory
+        ///     Loads the source code of the file into memory
         /// </summary>
         /// <returns>the success state of the operation</returns>
         public bool Load()
@@ -146,7 +146,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// returns true if the loading succeeded
+        ///     returns true if the loading succeeded
         /// </summary>
         /// <returns>the success state of the operation</returns>
         private bool LoadSource()

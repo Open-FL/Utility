@@ -3,13 +3,13 @@
 namespace Utility.ExtPP.Base
 {
     /// <summary>
-    /// A struct that is used to define custom commands.
+    ///     A struct that is used to define custom commands.
     /// </summary>
     public class CommandInfo
     {
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="command">primary command prefix</param>
         /// <param name="shortcut">shortcut command prefix</param>
@@ -27,7 +27,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="command">primary command prefix</param>
         /// <param name="shortcut">shortcut command prefix</param>
@@ -45,7 +45,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="command">primary command prefix</param>
         /// <param name="shortcut">shortcut command prefix</param>
@@ -59,7 +59,7 @@ namespace Utility.ExtPP.Base
 
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="command">primary command prefix</param>
         /// <param name="shortcut">shortcut command prefix</param>
@@ -72,45 +72,45 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// The help text of the command
+        ///     The help text of the command
         /// </summary>
         public string HelpText => Meta.HelpText;
 
         /// <summary>
-        /// The primary command.
-        /// Can be accessed with --
+        ///     The primary command.
+        ///     Can be accessed with --
         /// </summary>
         public string Command => Meta.Command;
 
         /// <summary>
-        /// The shortcut for the command
-        /// Can be accessed with -
+        ///     The shortcut for the command
+        ///     Can be accessed with -
         /// </summary>
         public string ShortCut => Meta.ShortCut;
 
         /// <summary>
-        /// If this parameter can be set by a global prefix
+        ///     If this parameter can be set by a global prefix
         /// </summary>
         public bool IncludeGlobal => Meta.IncludeGlobal;
 
         /// <summary>
-        /// The field that will be set with reflection
+        ///     The field that will be set with reflection
         /// </summary>
         public PropertyInfo Field { get; }
 
         /// <summary>
-        /// Wrapper to separate serializable info from the command info.
+        ///     Wrapper to separate serializable info from the command info.
         /// </summary>
         public CommandMetaData Meta { get; }
 
         /// <summary>
-        /// If true will set the value of the command to the default value if not specified directly in the settings
+        ///     If true will set the value of the command to the default value if not specified directly in the settings
         /// </summary>
         public object DefaultIfNotSpecified { get; }
 
 
         /// <summary>
-        /// Writes the information as readable text.
+        ///     Writes the information as readable text.
         /// </summary>
         /// <returns>The string representation fo the command</returns>
         public override string ToString()

@@ -83,7 +83,7 @@ namespace Utility.Serialization
             };
 
         /// <summary>
-        /// Reads an int from the Underlaying Stream
+        ///     Reads an int from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized int</returns>
         public static int ReadInt(byte[] input)
@@ -109,7 +109,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads an uint from the Underlaying Stream
+        ///     Reads an uint from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized uint</returns>
         public static uint ReadUInt(byte[] input)
@@ -118,7 +118,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads a long from the Underlaying Stream
+        ///     Reads a long from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized long</returns>
         public static long ReadLong(byte[] input)
@@ -127,7 +127,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads an ulong from the Underlaying Stream
+        ///     Reads an ulong from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized ulong</returns>
         public static ulong ReadULong(byte[] input)
@@ -136,7 +136,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads a short from the Underlaying Stream
+        ///     Reads a short from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized short</returns>
         public static short ReadShort(byte[] input)
@@ -145,7 +145,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads an ushort from the Underlaying Stream
+        ///     Reads an ushort from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized ushort</returns>
         public static ushort ReadUShort(byte[] input)
@@ -154,7 +154,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads a bool from the Underlaying Stream
+        ///     Reads a bool from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized bool</returns>
         public static bool ReadBool(byte[] input)
@@ -163,7 +163,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads a float from the Underlaying Stream
+        ///     Reads a float from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized float</returns>
         public static float ReadFloat(byte[] input)
@@ -172,7 +172,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads a double from the Underlaying Stream
+        ///     Reads a double from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized double</returns>
         public static double ReadDouble(byte[] input)
@@ -181,7 +181,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads a string from the Underlaying Stream
+        ///     Reads a string from the Underlaying Stream
         /// </summary>
         /// <returns>Deserialized string</returns>
         public static string ReadString(byte[] input)
@@ -201,7 +201,7 @@ namespace Utility.Serialization
 
 
         /// <summary>
-        /// Writes an int to the Stream
+        ///     Writes an int to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -230,7 +230,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes an uint to the Stream
+        ///     Writes an uint to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -240,7 +240,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a short to the Stream
+        ///     Writes a short to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -250,7 +250,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes an ushort to the Stream
+        ///     Writes an ushort to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -260,7 +260,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes an long to the Stream
+        ///     Writes an long to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -270,7 +270,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes an ulong to the Stream
+        ///     Writes an ulong to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -280,7 +280,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a sbyte to the Stream
+        ///     Writes a sbyte to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -290,7 +290,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a byte to the Stream
+        ///     Writes a byte to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -300,7 +300,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a bool to the Stream
+        ///     Writes a bool to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -310,7 +310,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a float to the Stream
+        ///     Writes a float to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -320,7 +320,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a double to the Stream
+        ///     Writes a double to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>
@@ -330,7 +330,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes a string to the Stream
+        ///     Writes a string to the Stream
         /// </summary>
         /// <param name="value">Value to Write</param>
         /// <returns>Bytes Written</returns>

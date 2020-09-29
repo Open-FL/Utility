@@ -4,7 +4,7 @@ using System.Reflection;
 namespace Utility.IO.VirtualFS.Core
 {
     /// <summary>
-    /// Assembly File Class that is used when the pack files are embedded in an assembly
+    ///     Assembly File Class that is used when the pack files are embedded in an assembly
     /// </summary>
     public class PackedAssemblyFile : AssemblyFile
     {

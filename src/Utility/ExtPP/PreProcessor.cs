@@ -14,18 +14,16 @@ using Utils = Utility.ExtPP.Base.Utils;
 namespace Utility.ExtPP
 {
     /// <summary>
-    /// 
     /// </summary>
     public class PreProcessor : ALoggable<LogType>
     {
 
         /// <summary>
-        /// 
         /// </summary>
         private readonly string sep = " ";
 
         /// <summary>
-        /// List of loaded plugins
+        ///     List of loaded plugins
         /// </summary>
         private List<AbstractPlugin> plugins = new List<AbstractPlugin>();
 
@@ -34,7 +32,8 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Returns the List of statements from all the plugins that are remaining in the file and need to be removed as a last step
+        ///     Returns the List of statements from all the plugins that are remaining in the file and need to be removed as a last
+        ///     step
         /// </summary>
         private List<string> CleanUpList
         {
@@ -52,8 +51,8 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Sets the File Processing Chain
-        /// 0 => First Plugin that gets executed
+        ///     Sets the File Processing Chain
+        ///     0 => First Plugin that gets executed
         /// </summary>
         /// <param name="fileProcessors">The List of Pluugins that will be used when processing files</param>
         public void SetFileProcessingChain(List<AbstractPlugin> fileProcessors)
@@ -73,7 +72,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Compiles a File with the definitions and settings provided
+        ///     Compiles a File with the definitions and settings provided
         /// </summary>
         /// <param name="files">FilePaths of the files.</param>
         /// <param name="settings">The settings used in this compilation</param>
@@ -92,7 +91,7 @@ namespace Utility.ExtPP
 
 
         /// <summary>
-        /// Compiles a File with the definitions and settings provided
+        ///     Compiles a File with the definitions and settings provided
         /// </summary>
         /// <param name="files">FilePaths of the files.</param>
         /// <param name="defs">Definitions</param>
@@ -109,7 +108,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Compiles a File with the definitions and settings provided
+        ///     Compiles a File with the definitions and settings provided
         /// </summary>
         /// <param name="files">FilePaths of the files.</param>
         /// <param name="settings">The settings used in this compilation</param>
@@ -121,7 +120,7 @@ namespace Utility.ExtPP
 
 
         /// <summary>
-        /// Initializing all Plugins with the settings, definitions and the source manager for this compilation
+        ///     Initializing all Plugins with the settings, definitions and the source manager for this compilation
         /// </summary>
         /// <param name="settings">The settings used</param>
         /// <param name="def">Definitions used</param>
@@ -143,7 +142,7 @@ namespace Utility.ExtPP
 
 
         /// <summary>
-        /// Compiles the Provided source array into a single file. And removes all remaining statements
+        ///     Compiles the Provided source array into a single file. And removes all remaining statements
         /// </summary>
         /// <param name="src">The Array of Sourcescripts that need to be compiled.</param>
         /// <returns>A compiled list out of the passed sourcescripts</returns>
@@ -172,7 +171,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Processes the file with the settings, definitions and the source manager specified.
+        ///     Processes the file with the settings, definitions and the source manager specified.
         /// </summary>
         /// <param name="files">the file paths to be processed</param>
         /// <param name="settings">the settings that are used</param>
@@ -239,7 +238,7 @@ namespace Utility.ExtPP
 
 
         /// <summary>
-        /// Runs the specified stage on the passed script
+        ///     Runs the specified stage on the passed script
         /// </summary>
         /// <param name="stage">The stage of the current processing</param>
         /// <param name="script">the script to be processed</param>
@@ -272,7 +271,7 @@ namespace Utility.ExtPP
 
 
         /// <summary>
-        /// Runs the plugin stage with the specififed type
+        ///     Runs the plugin stage with the specififed type
         /// </summary>
         /// <param name="type"></param>
         /// <param name="stage">The stage of the current processing</param>
@@ -313,7 +312,7 @@ namespace Utility.ExtPP
 
 
         /// <summary>
-        /// Wrapper that runs a list of line plugins based on the stage that is beeing run.
+        ///     Wrapper that runs a list of line plugins based on the stage that is beeing run.
         /// </summary>
         /// <param name="lineStage">The chain for this stage</param>
         /// <param name="stage">The stage of the current processing</param>
@@ -342,7 +341,6 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="fullScriptStage">The chain for this stage</param>
         /// <param name="stage">The stage of the current processing</param>

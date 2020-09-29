@@ -1,7 +1,7 @@
 ﻿namespace Utility.ExtPP.Base.settings
 {
     /// <summary>
-    /// An enum that contains all possible process stages.
+    ///     An enum that contains all possible process stages.
     /// </summary>
     public enum ProcessStage
     {

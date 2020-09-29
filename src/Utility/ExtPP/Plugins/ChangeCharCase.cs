@@ -49,7 +49,7 @@ namespace Utility.ExtPP.Plugins
         }
 
         /// <summary>
-        /// No initialization needed for this plugin.
+        ///     No initialization needed for this plugin.
         /// </summary>
         /// <param name="settings"></param>
         /// <param name="sourceManager"></param>

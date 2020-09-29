@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Globalization;
 using System.Reflection;
 
 using Utility.Expressions.Enums;
@@ -12,23 +13,23 @@ using Utility.Expressions.OPCodes;
 namespace Utility.Expressions
 {
     /// <summary>
-    /// The Internal Parser.
+    ///     The Internal Parser.
     /// </summary>
     internal class Parser
     {
 
         /// <summary>
-        /// The Evaluator Instance
+        ///     The Evaluator Instance
         /// </summary>
         private readonly Evaluator mEvaluator;
 
         /// <summary>
-        /// The Tokenizer that is used for the Parsing Process
+        ///     The Tokenizer that is used for the Parsing Process
         /// </summary>
         private Tokenizer mTokenizer;
 
         /// <summary>
-        /// Public Constructor
+        ///     Public Constructor
         /// </summary>
         /// <param name="evaluator">The Evaluator Instance</param>
         public Parser(Evaluator evaluator)
@@ -37,7 +38,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Parses an Expression
+        ///     Parses an Expression
         /// </summary>
         /// <param name="str">The Expression</param>
         /// <returns>Parsed OpCode</returns>
@@ -67,7 +68,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Parses an Expression from an 
+        ///     Parses an Expression from an
         /// </summary>
         /// <param name="acc">The "Parent" OPCode</param>
         /// <param name="priority">Priority of the OPCode</param>
@@ -138,9 +139,9 @@ namespace Utility.Expressions
                                                             EvalType.Number,
                                                             double.Parse(
                                                                          mTokenizer.Value.ToString(),
-                                                                         System.Globalization.NumberStyles.Float,
-                                                                         System.Globalization.CultureInfo
-                                                                               .InvariantCulture
+                                                                         NumberStyles.Float,
+                                                                         CultureInfo
+                                                                             .InvariantCulture
                                                                         )
                                                            );
                         }
@@ -339,7 +340,7 @@ namespace Utility.Expressions
 
 
         /// <summary>
-        /// Runs a Function by name
+        ///     Runs a Function by name
         /// </summary>
         /// <param name="valueLeft">The Left Side value of the Call</param>
         /// <param name="funcName">The Function Name</param>
@@ -376,7 +377,9 @@ namespace Utility.Expressions
                     }
 
                     if (newOpcode != null)
+                    {
                         break;
+                    }
                 }
             }
             else
@@ -399,7 +402,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Returns the OPCodeCallMethod of the Object 
+        ///     Returns the OPCodeCallMethod of the Object
         /// </summary>
         /// <param name="base">The Object Instance</param>
         /// <param name="baseType">The Type of the Object</param>
@@ -471,7 +474,7 @@ namespace Utility.Expressions
 
 
         /// <summary>
-        /// Returns the Member Info of the Function inside the Type
+        ///     Returns the Member Info of the Function inside the Type
         /// </summary>
         /// <param name="objType">The Type to Extract the MemberInfo From</param>
         /// <param name="func">The Function Name</param>
@@ -581,7 +584,7 @@ namespace Utility.Expressions
 
 
         /// <summary>
-        /// This function returns a score 1 to 10 depending on how compatible the object instance and the type are
+        ///     This function returns a score 1 to 10 depending on how compatible the object instance and the type are
         /// </summary>
         /// <param name="value">Object Instance</param>
         /// <param name="type">The Type</param>
@@ -614,7 +617,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Parses the "." From the specified OPCode.
+        ///     Parses the "." From the specified OPCode.
         /// </summary>
         /// <param name="valueLeft">The OPCode</param>
         private void ParseDot(ref OPCode valueLeft)
@@ -646,7 +649,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Parses an Identifier of the Specified OPCode
+        ///     Parses an Identifier of the Specified OPCode
         /// </summary>
         /// <param name="valueLeft">The OPCode</param>
         private void ParseIdentifier(ref OPCode valueLeft)
@@ -727,7 +730,7 @@ namespace Utility.Expressions
 
 
         /// <summary>
-        /// Parses the Parameters to a Function Call.
+        ///     Parses the Parameters to a Function Call.
         /// </summary>
         /// <param name="brackets">Is True if the Parameters are specified in brackets</param>
         /// <returns>The List of Parameters</returns>

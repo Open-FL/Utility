@@ -6,13 +6,13 @@ using Utility.Expressions.Interfaces;
 namespace Utility.Expressions
 {
     /// <summary>
-    /// Implements Static Helper Functions
+    ///     Implements Static Helper Functions
     /// </summary>
     public static class Globals
     {
 
         /// <summary>
-        /// Returns true if the two stings are equal
+        ///     Returns true if the two stings are equal
         /// </summary>
         /// <param name="v1">First String</param>
         /// <param name="v2">Second String</param>
@@ -113,7 +113,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Returns the EvalType of the Object
+        ///     Returns the EvalType of the Object
         /// </summary>
         /// <param name="o">Object Instance</param>
         /// <returns>The EvalType of the Object</returns>
@@ -129,7 +129,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Returns the EvalType of the specified Type
+        ///     Returns the EvalType of the specified Type
         /// </summary>
         /// <param name="t">Type</param>
         /// <returns>The Eval Type for this Type</returns>
@@ -168,7 +168,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Returns the System Type from the Specified EvalType
+        ///     Returns the System Type from the Specified EvalType
         /// </summary>
         /// <param name="t">The Eval Type</param>
         /// <returns>System Type associated to the EvalType</returns>
@@ -204,7 +204,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Returns the Boolean Value from the IEvalTypedValue Object
+        ///     Returns the Boolean Value from the IEvalTypedValue Object
         /// </summary>
         /// <param name="o">The IEvalTypedValue Object</param>
         /// <returns>Boolean Value</returns>
@@ -214,7 +214,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Returns the DateTime Value from the IEvalTypedValue Object
+        ///     Returns the DateTime Value from the IEvalTypedValue Object
         /// </summary>
         /// <param name="o">The IEvalTypedValue Object</param>
         /// <returns>DateTime Value</returns>
@@ -224,7 +224,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Returns the Number Value from the IEvalTypedValue Object
+        ///     Returns the Number Value from the IEvalTypedValue Object
         /// </summary>
         /// <param name="o">The IEvalTypedValue Object</param>
         /// <returns>Number Value</returns>
@@ -234,7 +234,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Returns the String Value from the IEvalTypedValue Object
+        ///     Returns the String Value from the IEvalTypedValue Object
         /// </summary>
         /// <param name="o">The IEvalTypedValue Object</param>
         /// <returns>String Value</returns>

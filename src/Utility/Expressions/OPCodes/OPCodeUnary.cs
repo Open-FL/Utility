@@ -6,23 +6,23 @@ using Utility.Expressions.Enums;
 namespace Utility.Expressions.OPCodes
 {
     /// <summary>
-    /// Implements Unary OPCodes like NOT and UNARY_MINUS
+    ///     Implements Unary OPCodes like NOT and UNARY_MINUS
     /// </summary>
     internal class OPCodeUnary : OPCode
     {
 
         /// <summary>
-        /// The Evaluation Type Backing Field
+        ///     The Evaluation Type Backing Field
         /// </summary>
         private readonly EvalType mEvalType;
 
         /// <summary>
-        /// The Parameter Backing Field
+        ///     The Parameter Backing Field
         /// </summary>
         private OPCode _param1;
 
         /// <summary>
-        /// Public Constructor
+        ///     Public Constructor
         /// </summary>
         /// <param name="tt">The Token Type</param>
         /// <param name="param1">The Parameter</param>
@@ -57,7 +57,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The Parameter
+        ///     The Parameter
         /// </summary>
         private OPCode Param1
         {
@@ -82,12 +82,12 @@ namespace Utility.Expressions.OPCodes
 
 
         /// <summary>
-        /// The Evaluation Type
+        ///     The Evaluation Type
         /// </summary>
         public override EvalType EvalType => mEvalType;
 
         /// <summary>
-        /// Returns the Inverse of the Parameter(Boolean)
+        ///     Returns the Inverse of the Parameter(Boolean)
         /// </summary>
         /// <returns>Inverse of the Parameter Value</returns>
         private object BOOLEAN_NOT()
@@ -96,7 +96,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns the Negative Value of the Parameter(Double)
+        ///     Returns the Negative Value of the Parameter(Double)
         /// </summary>
         /// <returns>The Negative Value of the Parameter</returns>
         private object NUM_CHGSIGN()
@@ -105,7 +105,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Gets Invoked when the parameter value changes.
+        ///     Gets Invoked when the parameter value changes.
         /// </summary>
         /// <param name="sender">The Sender of the Event</param>
         /// <param name="e">The Event Args</param>

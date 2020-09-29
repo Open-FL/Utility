@@ -6,55 +6,55 @@ using Utility.Expressions.Interfaces;
 namespace Utility.Expressions.OPCodes
 {
     /// <summary>
-    /// Abstract OPCode Class.
-    /// Does Implement IEvalTypedValue and IEvalHasDescription Interfaces
+    ///     Abstract OPCode Class.
+    ///     Does Implement IEvalTypedValue and IEvalHasDescription Interfaces
     /// </summary>
     public abstract class OPCode : IEvalTypedValue, IEvalHasDescription
     {
 
         /// <summary>
-        /// The RunDelegate Definition
+        ///     The RunDelegate Definition
         /// </summary>
         public delegate void RunDelegate();
 
         /// <summary>
-        /// The ValueDelegate used to Compute the Value
+        ///     The ValueDelegate used to Compute the Value
         /// </summary>
         protected ValueDelegate mValueDelegate;
 
         /// <summary>
-        /// The Description of the OPCode
+        ///     The Description of the OPCode
         /// </summary>
         public virtual string Description => "OPCode " + GetType().Name;
 
         /// <summary>
-        /// The OPCode Name
+        ///     The OPCode Name
         /// </summary>
         public virtual string Name => "OPCode " + GetType().Name;
 
         /// <summary>
-        /// The Evaluation Type of the OPCode
+        ///     The Evaluation Type of the OPCode
         /// </summary>
         public abstract EvalType EvalType { get; }
 
         /// <summary>
-        /// The Value of the OPCode.
-        /// Invoked the ValueDelegate
+        ///     The Value of the OPCode.
+        ///     Invoked the ValueDelegate
         /// </summary>
         public virtual object Value => mValueDelegate();
 
         /// <summary>
-        /// The System Type of the OPCode Value
+        ///     The System Type of the OPCode Value
         /// </summary>
         public virtual Type SystemType => Globals.GetSystemType(EvalType);
 
         /// <summary>
-        /// ValueChanged EventHandler
+        ///     ValueChanged EventHandler
         /// </summary>
         public event ValueChangedEventHandler ValueChanged;
 
         /// <summary>
-        /// Raises the Event ValueChanged
+        ///     Raises the Event ValueChanged
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -64,7 +64,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns true if the OPCode is able to return a Value of the Specified Type
+        ///     Returns true if the OPCode is able to return a Value of the Specified Type
         /// </summary>
         /// <param name="type">The Type</param>
         /// <returns>True if the OPCode can return this Value Type</returns>
@@ -74,7 +74,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Converts the Specified OPCode to the Specified EvalType
+        ///     Converts the Specified OPCode to the Specified EvalType
         /// </summary>
         /// <param name="tokenizer">The Tokenizer Instance</param>
         /// <param name="param1">The OPCode to Convert</param>
@@ -95,7 +95,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Converts an IEvalTypedValue to the Specified System Type
+        ///     Converts an IEvalTypedValue to the Specified System Type
         /// </summary>
         /// <param name="param1"></param>
         /// <param name="systemType"></param>
@@ -116,7 +116,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Swaps the two Parameters
+        ///     Swaps the two Parameters
         /// </summary>
         /// <param name="param1">New parameter 2</param>
         /// <param name="param2">New parameter 1</param>
@@ -128,7 +128,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The ValueDelegate Definition
+        ///     The ValueDelegate Definition
         /// </summary>
         /// <returns></returns>
         protected delegate object ValueDelegate();

@@ -3,7 +3,7 @@
 namespace Utility.IO.VirtualFS.Core
 {
     /// <summary>
-    /// A Container for the raw byte content of a package
+    ///     A Container for the raw byte content of a package
     /// </summary>
     public class AssetPack
     {

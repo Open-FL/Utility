@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 namespace Utility.IO.VirtualFS.Core
 {
     /// <summary>
-    /// The Result Class for the Packing Process
+    ///     The Result Class for the Packing Process
     /// </summary>
     [Serializable]
     public class AssetResult

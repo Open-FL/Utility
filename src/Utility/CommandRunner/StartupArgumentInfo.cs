@@ -5,35 +5,36 @@ using System.Linq;
 namespace Utility.CommandRunner
 {
     /// <summary>
-    /// Contains the Logic that contains logic for CLI argument parsing
+    ///     Contains the Logic that contains logic for CLI argument parsing
     /// </summary>
     public class StartupArgumentInfo
     {
 
         /// <summary>
-        /// Defines the Prefix for Command Keys that are longer.
+        ///     Defines the Prefix for Command Keys that are longer.
         /// </summary>
         public static readonly string LongCommandPrefix = "--";
 
         /// <summary>
-        /// Defines the Prefix for Command Keys that act as shortcuts to longer commands.
+        ///     Defines the Prefix for Command Keys that act as shortcuts to longer commands.
         /// </summary>
         public static readonly string ShortCommandPrefix = "-";
 
         /// <summary>
-        /// When used as an Argument the Implementation will load the file after the symbols and use each line as parameter for the command.
+        ///     When used as an Argument the Implementation will load the file after the symbols and use each line as parameter for
+        ///     the command.
         /// </summary>
         public static readonly string FilePathPrefix = "@";
 
         /// <summary>
-        /// All Values/Arguments Ordered by First command key.
-        /// Multiple Keys Possible.
+        ///     All Values/Arguments Ordered by First command key.
+        ///     Multiple Keys Possible.
         /// </summary>
         private readonly List<KeyValuePair<string, List<string>>> values =
             new List<KeyValuePair<string, List<string>>>();
 
         /// <summary>
-        /// Public constructors
+        ///     Public constructors
         /// </summary>
         /// <param name="args">Command Line Input.</param>
         public StartupArgumentInfo(string[] args)
@@ -86,7 +87,7 @@ namespace Utility.CommandRunner
 
 
         /// <summary>
-        /// Returns True if the Text is a short or long command.
+        ///     Returns True if the Text is a short or long command.
         /// </summary>
         /// <param name="text">The text to check</param>
         /// <returns></returns>
@@ -96,7 +97,7 @@ namespace Utility.CommandRunner
         }
 
         /// <summary>
-        /// returns the Values with the specified flag(key)
+        ///     returns the Values with the specified flag(key)
         /// </summary>
         /// <param name="flag">Flag to return</param>
         /// <param name="id">Index of the occurence</param>
@@ -107,7 +108,7 @@ namespace Utility.CommandRunner
         }
 
         /// <summary>
-        /// Returns the number of entries in the list with the specified flag
+        ///     Returns the number of entries in the list with the specified flag
         /// </summary>
         /// <param name="flag">Flag to test</param>
         /// <returns>Count of the Entries with the Same Key</returns>
@@ -117,7 +118,7 @@ namespace Utility.CommandRunner
         }
 
         /// <summary>
-        /// Resolves the FileReference by reading all lines and adding them as arguments(one per line)
+        ///     Resolves the FileReference by reading all lines and adding them as arguments(one per line)
         /// </summary>
         /// <param name="arg">Argument with Format: @(PathToFile)</param>
         /// <returns>Lines of the File.</returns>

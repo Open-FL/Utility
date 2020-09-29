@@ -10,7 +10,7 @@ using Utility.Serialization.Serializers.Base;
 namespace Utility.Serialization
 {
     /// <summary>
-    /// Serializer API Class
+    ///     Serializer API Class
     /// </summary>
     public class Byt3Serializer
     {
@@ -18,18 +18,18 @@ namespace Utility.Serialization
         private readonly Dictionary<object, Type> KeyTypeCache = new Dictionary<object, Type>();
 
         /// <summary>
-        /// Serializer Dictionary of serializers with custom key
+        ///     Serializer Dictionary of serializers with custom key
         /// </summary>
         private readonly Dictionary<Type, ASerializer> Serializers = new Dictionary<Type, ASerializer>();
 
         /// <summary>
-        /// Cache that gets used to store the map from object => Type
-        /// that gets used during Deserialization
+        ///     Cache that gets used to store the map from object => Type
+        ///     that gets used during Deserialization
         /// </summary>
         private readonly Dictionary<Type, object> TypeKeyCache = new Dictionary<Type, object>();
 
         /// <summary>
-        /// The Base Initializer that is beeing used.
+        ///     The Base Initializer that is beeing used.
         /// </summary>
         private ABaseSerializer BaseSerializer = new DefaultBaseSerializer();
 
@@ -64,7 +64,7 @@ namespace Utility.Serialization
 
 
         /// <summary>
-        /// Returns the Type based on the Key.
+        ///     Returns the Type based on the Key.
         /// </summary>
         /// <param name="key">Key of the Type</param>
         /// <returns>Type mapped to this key</returns>
@@ -80,7 +80,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Returns the Type based on the Key.
+        ///     Returns the Type based on the Key.
         /// </summary>
         /// <param name="key">Key of the Type</param>
         /// <returns>Type mapped to this key</returns>
@@ -111,7 +111,7 @@ namespace Utility.Serialization
         #region Serializer Add/Set/Remove
 
         /// <summary>
-        /// Adds a Serializer that can de/serialize objects of the specialized type to the Serializers
+        ///     Adds a Serializer that can de/serialize objects of the specialized type to the Serializers
         /// </summary>
         /// <param name="type">Type that can be de/serialized</param>
         /// <param name="packetSerializer">The Serializer that can de/serialize objects of type</param>
@@ -134,7 +134,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Adds a Serializer that can de/serialize objects of type T to the Serializers
+        ///     Adds a Serializer that can de/serialize objects of type T to the Serializers
         /// </summary>
         /// <typeparam name="T">Type of object that is de/serializable</typeparam>
         /// <param name="packetSerializer">The Serializer that can de/serialize objects of type T</param>
@@ -145,7 +145,7 @@ namespace Utility.Serialization
 
 
         /// <summary>
-        /// Sets the Base Serializer to a user defined implementation
+        ///     Sets the Base Serializer to a user defined implementation
         /// </summary>
         /// <param name="baseSerializer">The Base Initializer to use</param>
         public void SetBaseSerializer(ABaseSerializer baseSerializer)
@@ -216,7 +216,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Writes the object to the Specified Stream
+        ///     Writes the object to the Specified Stream
         /// </summary>
         /// <param name="stream">Target Stream</param>
         /// <param name="obj">Object to Serialize</param>
@@ -246,7 +246,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Generic Implementation of WritePacket
+        ///     Generic Implementation of WritePacket
         /// </summary>
         /// <typeparam name="T">Type of Object to Serialize</typeparam>
         /// <param name="stream">Target Stream</param>
@@ -292,7 +292,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Reads an Object from the Specified Stream
+        ///     Reads an Object from the Specified Stream
         /// </summary>
         /// <param name="stream">Input Stream</param>
         /// <returns>The Deserialized Object</returns>
@@ -323,7 +323,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Generic Implementation of ReadPacket
+        ///     Generic Implementation of ReadPacket
         /// </summary>
         /// <typeparam name="T">Type of Object to Deserialize</typeparam>
         /// <param name="stream">Input Stream</param>
@@ -345,7 +345,7 @@ namespace Utility.Serialization
         #region CanSerialize
 
         /// <summary>
-        /// Returns True if the Specified key is in the KeyTypeCache(e.g. has a serializer added)
+        ///     Returns True if the Specified key is in the KeyTypeCache(e.g. has a serializer added)
         /// </summary>
         /// <param name="key">Key of the Type</param>
         /// <returns>true if the Serializer for this type can be found</returns>
@@ -355,7 +355,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Returns True if the Specified Type can be Serialized(e.g. has a serializer added)
+        ///     Returns True if the Specified Type can be Serialized(e.g. has a serializer added)
         /// </summary>
         /// <param name="t">The Type to Check for</param>
         /// <returns>true if the Serializer for this type can be found</returns>
@@ -365,7 +365,7 @@ namespace Utility.Serialization
         }
 
         /// <summary>
-        /// Returns True if the Specified Type can be Serialized(e.g. has a serializer added)
+        ///     Returns True if the Specified Type can be Serialized(e.g. has a serializer added)
         /// </summary>
         /// <typeparam name="T">The Type to Check for</typeparam>
         /// <returns>true if the Serializer for this type can be found</returns>

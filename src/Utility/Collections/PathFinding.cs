@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 
+using Utility.Collections.Enums;
 using Utility.Collections.Interfaces;
 
 namespace Utility.Collections
@@ -30,7 +31,7 @@ namespace Utility.Collections
 
                 current = connectedNodes.Dequeue();
                 doneNodes.Add(current);
-                current.NodeState = Enums.NodeState.Closed;
+                current.NodeState = NodeState.Closed;
 
                 if (current == to)
                 {
@@ -46,12 +47,12 @@ namespace Utility.Collections
                 for (int i = 0; i < current.ConnectedNodes.Length; i++)
                 {
                     INode connected = current.ConnectedNodes[i];
-                    if (!connected.NodeIsActive || connected.NodeState == Enums.NodeState.Closed)
+                    if (!connected.NodeIsActive || connected.NodeState == NodeState.Closed)
                     {
                         continue;
                     }
 
-                    if (connected.NodeState == Enums.NodeState.Untested)
+                    if (connected.NodeState == NodeState.Untested)
                     {
                         connected.NodeParentNode = current;
                         connected.NodeCurrentCost =
@@ -61,7 +62,7 @@ namespace Utility.Collections
                         connected.NodeEstimatedCost =
                             connected.NodeCurrentCost +
                             VectorMath.GetDistance(connected.NodePosition, to.NodePosition);
-                        connected.NodeState = Enums.NodeState.Open;
+                        connected.NodeState = NodeState.Open;
                         connectedNodes.Enqueue(connected);
                     }
 
@@ -88,7 +89,7 @@ namespace Utility.Collections
                 node.NodeCurrentCost = 0;
                 node.NodeEstimatedCost = 0;
                 node.NodeParentNode = null;
-                node.NodeState = Enums.NodeState.Untested;
+                node.NodeState = NodeState.Untested;
             }
         }
 

@@ -7,23 +7,23 @@ using System.Reflection;
 namespace Utility.IO.VirtualFS.Core
 {
     /// <summary>
-    /// Container Class used to Group Files by Assembly
+    ///     Container Class used to Group Files by Assembly
     /// </summary>
     public class AssemblyFile
     {
 
         /// <summary>
-        /// The Assembly containing all files in this object
+        ///     The Assembly containing all files in this object
         /// </summary>
         public readonly Assembly Assembly;
 
         /// <summary>
-        /// All files in this object
+        ///     All files in this object
         /// </summary>
         public readonly string[] ManifestFilepaths;
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="compression"></param>
         /// <param name="manifestFilepath"></param>
@@ -47,7 +47,7 @@ namespace Utility.IO.VirtualFS.Core
         }
 
         /// <summary>
-        /// If the assembly has compressed files
+        ///     If the assembly has compressed files
         /// </summary>
         public bool Compression { get; }
 

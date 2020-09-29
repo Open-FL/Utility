@@ -12,7 +12,7 @@ using Utility.IO.VirtualFS.Core;
 namespace Utility.IO.VirtualFS
 {
     /// <summary>
-    /// Class that implements reading resources from an Assembly Manifest
+    ///     Class that implements reading resources from an Assembly Manifest
     /// </summary>
     public static class ManifestReader
     {
@@ -32,7 +32,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Loads an Assembly List file
+        ///     Loads an Assembly List file
         /// </summary>
         /// <param name="filepath"></param>
         public static void LoadAssemblyListFromFile(string filepath)
@@ -44,7 +44,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Logs all Files to the Console
+        ///     Logs all Files to the Console
         /// </summary>
         public static void ListAllFiles()
         {
@@ -55,7 +55,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Loads the Assembly List from a stream
+        ///     Loads the Assembly List from a stream
         /// </summary>
         /// <param name="data"></param>
         public static void LoadAssemblyList(Stream data)
@@ -78,7 +78,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Registers an Assembly into the IO Embedding Process
+        ///     Registers an Assembly into the IO Embedding Process
         /// </summary>
         /// <param name="asm"></param>
         public static void RegisterAssembly(Assembly asm)
@@ -228,7 +228,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Prepares the Assembly Files for the loading process
+        ///     Prepares the Assembly Files for the loading process
         /// </summary>
         /// <param name="searchFileSystem">Flag to prefer the filesystem over the Assembly when preparing packaged files</param>
         public static void PrepareManifestFiles(bool searchFileSystem)
@@ -316,7 +316,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Returns the Manifest Stream by path
+        ///     Returns the Manifest Stream by path
         /// </summary>
         /// <param name="filepath"></param>
         /// <returns></returns>
@@ -333,7 +333,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Returns true if this directory is existing(has minor trouble with . characters in filenames)
+        ///     Returns true if this directory is existing(has minor trouble with . characters in filenames)
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
@@ -352,7 +352,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Returns a list of files that are in the specified path and satisfy the search pattern
+        ///     Returns a list of files that are in the specified path and satisfy the search pattern
         /// </summary>
         /// <param name="path"></param>
         /// <param name="searchPattern">* = all files</param>
@@ -403,7 +403,7 @@ namespace Utility.IO.VirtualFS
 
 
         /// <summary>
-        /// Turns a Filepath that refers to an assembly file into a filepath
+        ///     Turns a Filepath that refers to an assembly file into a filepath
         /// </summary>
         /// <param name="filepath"></param>
         /// <returns></returns>
@@ -418,7 +418,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Turns a Filepath that refers to an file on the filesystem into a filepath for assembly files
+        ///     Turns a Filepath that refers to an file on the filesystem into a filepath for assembly files
         /// </summary>
         /// <param name="filepath"></param>
         /// <returns></returns>
@@ -440,7 +440,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Returns true if this file exists
+        ///     Returns true if this file exists
         /// </summary>
         /// <param name="filepath"></param>
         /// <returns></returns>
@@ -452,7 +452,7 @@ namespace Utility.IO.VirtualFS
         }
 
         /// <summary>
-        /// Clears all unpacked files from the filesystem
+        ///     Clears all unpacked files from the filesystem
         /// </summary>
         public static void ClearUnpackedFiles()
         {

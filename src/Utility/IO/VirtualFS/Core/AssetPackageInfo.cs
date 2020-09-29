@@ -3,7 +3,7 @@
 namespace Utility.IO.VirtualFS.Core
 {
     /// <summary>
-    /// Class containing a map of filepaths to their AssetFileInfo objects
+    ///     Class containing a map of filepaths to their AssetFileInfo objects
     /// </summary>
     public class AssetPackageInfo
     {

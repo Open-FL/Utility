@@ -6,28 +6,28 @@ using Utility.Expressions.Enums;
 namespace Utility.Expressions.OPCodes
 {
     /// <summary>
-    /// OPCode that is Returned when the OPCode does Resolve to a Binary Result(Boolean)
+    ///     OPCode that is Returned when the OPCode does Resolve to a Binary Result(Boolean)
     /// </summary>
     internal class OPCodeBinary : OPCode
     {
 
         /// <summary>
-        /// The Evaluation Type Backing Field
+        ///     The Evaluation Type Backing Field
         /// </summary>
         private readonly EvalType mEvalType;
 
         /// <summary>
-        /// The Backing Field First Inner OPCode Parameter
+        ///     The Backing Field First Inner OPCode Parameter
         /// </summary>
         private OPCode _param1;
 
         /// <summary>
-        /// The Backing Field Second Inner OPCode Parameter
+        ///     The Backing Field Second Inner OPCode Parameter
         /// </summary>
         private OPCode _param2;
 
         /// <summary>
-        /// Public Constructor
+        ///     Public Constructor
         /// </summary>
         /// <param name="tokenizer">The Tokenizer Instance</param>
         /// <param name="param1">First Parameter</param>
@@ -247,7 +247,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The First Inner OPCode Parameter
+        ///     The First Inner OPCode Parameter
         /// </summary>
         private OPCode Param1
         {
@@ -271,7 +271,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The Second Inner OPCode Parameter
+        ///     The Second Inner OPCode Parameter
         /// </summary>
         private OPCode Param2
         {
@@ -295,12 +295,12 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The Evaluation Type
+        ///     The Evaluation Type
         /// </summary>
         public override EvalType EvalType => mEvalType;
 
         /// <summary>
-        /// Returns Param1 AND Param2
+        ///     Returns Param1 AND Param2
         /// </summary>
         /// <returns>True if both Values are True</returns>
         private object BOOL_AND_BOOL()
@@ -309,7 +309,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 OR Param2
+        ///     Returns Param1 OR Param2
         /// </summary>
         /// <returns>True if at least one Value is True</returns>
         private object BOOL_OR_BOOL()
@@ -318,7 +318,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 XOR Param2
+        ///     Returns Param1 XOR Param2
         /// </summary>
         /// <returns>True if only one value True</returns>
         private object BOOL_XOR_BOOL()
@@ -327,7 +327,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 == Param2
+        ///     Returns Param1 == Param2
         /// </summary>
         /// <returns>True if both values are equal</returns>
         private object BOOL_EQ_BOOL()
@@ -336,7 +336,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 != Param2
+        ///     Returns Param1 != Param2
         /// </summary>
         /// <returns>True if both values are not equal</returns>
         private object BOOL_NE_BOOL()
@@ -345,7 +345,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 == Param2 (DOUBLE)
+        ///     Returns Param1 == Param2 (DOUBLE)
         /// </summary>
         /// <returns>True if both values are equal</returns>
         private object NUM_EQ_NUM()
@@ -354,7 +354,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 &lt; Param2 (DOUBLE)
+        ///     Returns Param1 &lt; Param2 (DOUBLE)
         /// </summary>
         /// <returns>True if the first value is smaller than the second value</returns>
         private object NUM_LT_NUM()
@@ -363,7 +363,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 &gt; Param2 (DOUBLE)
+        ///     Returns Param1 &gt; Param2 (DOUBLE)
         /// </summary>
         /// <returns>True if the first value is greater than the second value</returns>
         private object NUM_GT_NUM()
@@ -372,7 +372,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 >= Param2 (DOUBLE)
+        ///     Returns Param1 >= Param2 (DOUBLE)
         /// </summary>
         /// <returns>True if both the first value is greater than or equal to the second value</returns>
         private object NUM_GE_NUM()
@@ -381,7 +381,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 &lt;= Param2 (DOUBLE)
+        ///     Returns Param1 &lt;= Param2 (DOUBLE)
         /// </summary>
         /// <returns>True if both the first value is lower than or equal to the second value</returns>
         private object NUM_LE_NUM()
@@ -390,7 +390,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 != Param2 (DOUBLE)
+        ///     Returns Param1 != Param2 (DOUBLE)
         /// </summary>
         /// <returns>True if both the first value is not equal to the second value</returns>
         private object NUM_NE_NUM()
@@ -399,7 +399,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 + Param2 (DOUBLE)
+        ///     Returns Param1 + Param2 (DOUBLE)
         /// </summary>
         /// <returns>The Addition of the first and second value</returns>
         private object NUM_PLUS_NUM()
@@ -408,7 +408,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 * Param2 (DOUBLE)
+        ///     Returns Param1 * Param2 (DOUBLE)
         /// </summary>
         /// <returns>The Multiplication of the first and second value</returns>
         private object NUM_MUL_NUM()
@@ -417,7 +417,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 - Param2 (DOUBLE)
+        ///     Returns Param1 - Param2 (DOUBLE)
         /// </summary>
         /// <returns>The Subtraction of the first and second value</returns>
         private object NUM_MINUS_NUM()
@@ -427,7 +427,7 @@ namespace Utility.Expressions.OPCodes
 
 
         /// <summary>
-        /// Returns Param1 + Param2 (DATETIME)
+        ///     Returns Param1 + Param2 (DATETIME)
         /// </summary>
         /// <returns>The Addition of the first and second value</returns>
         private object DATE_PLUS_NUM()
@@ -436,7 +436,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 - Param2 (DATETIME)
+        ///     Returns Param1 - Param2 (DATETIME)
         /// </summary>
         /// <returns>The Subtraction of the first and second value</returns>
         private object DATE_MINUS_DATE()
@@ -445,7 +445,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1(DATETIME) - Param2 (DOUBLE)
+        ///     Returns Param1(DATETIME) - Param2 (DOUBLE)
         /// </summary>
         /// <returns>The Subtraction of the first and second value</returns>
         private object DATE_MINUS_NUM()
@@ -454,7 +454,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns the Concatenated Result of two string values
+        ///     Returns the Concatenated Result of two string values
         /// </summary>
         /// <returns>Concatenated String</returns>
         private object STR_CONCAT_STR()
@@ -463,7 +463,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 / Param2 (DOUBLE)
+        ///     Returns Param1 / Param2 (DOUBLE)
         /// </summary>
         /// <returns>The Division of the first and second value</returns>
         private object NUM_DIV_NUM()
@@ -472,7 +472,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Returns Param1 * (Param2/100) (DOUBLE)
+        ///     Returns Param1 * (Param2/100) (DOUBLE)
         /// </summary>
         /// <returns>The Percentage of the First Value</returns>
         private object NUM_PERCENT_NUM()
@@ -481,7 +481,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Gets Invoked when the first value was changed
+        ///     Gets Invoked when the first value was changed
         /// </summary>
         /// <param name="sender">The Sender of the Event</param>
         /// <param name="e">The Event Args</param>
@@ -491,7 +491,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// Gets Invoked when the second value was changed
+        ///     Gets Invoked when the second value was changed
         /// </summary>
         /// <param name="sender">The Sender of the Event</param>
         /// <param name="e">The Event Args</param>

@@ -9,13 +9,13 @@ namespace Utility.FastString
     {
 
         /// <summary>
-        /// String builder to be able to concat long arrays faster
+        ///     String builder to be able to concat long arrays faster
         /// </summary>
         private static readonly StringBuilder Sb = new StringBuilder();
 
 
         /// <summary>
-        /// Concats the array into a string separated by the separator
+        ///     Concats the array into a string separated by the separator
         /// </summary>
         /// <param name="arr">The array to be unpacked</param>
         /// <param name="separator">the separator that will be used when unpacking</param>
@@ -47,7 +47,7 @@ namespace Utility.FastString
         }
 
         /// <summary>
-        /// Turns a string into an array split by the separator
+        ///     Turns a string into an array split by the separator
         /// </summary>
         /// <param name="arr">The array to be packed</param>
         /// <param name="separator">the separator that will be used when packing</param>
@@ -59,7 +59,7 @@ namespace Utility.FastString
 
 
         /// <summary>
-        /// Smart way to determine if a char sequence contains only digits
+        ///     Smart way to determine if a char sequence contains only digits
         /// </summary>
         /// <param name="str">string to be checked</param>
         /// <returns>true if the string only contains chars from '0' to '9'</returns>

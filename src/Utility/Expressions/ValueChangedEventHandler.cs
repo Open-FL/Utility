@@ -3,7 +3,7 @@
 namespace Utility.Expressions
 {
     /// <summary>
-    /// The Event Handler for the OPCode.ValueChanged event
+    ///     The Event Handler for the OPCode.ValueChanged event
     /// </summary>
     /// <param name="sender">Sender of the Event</param>
     /// <param name="e">The Event Args</param>

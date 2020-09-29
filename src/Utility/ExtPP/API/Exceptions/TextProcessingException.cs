@@ -5,7 +5,7 @@ using Utility.Exceptions;
 namespace Utility.ExtPP.API.Exceptions
 {
     /// <summary>
-    /// Exception that occurs when the Text Processor encounters an error.
+    ///     Exception that occurs when the Text Processor encounters an error.
     /// </summary>
     public class TextProcessingException : Byt3Exception
     {

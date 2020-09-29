@@ -7,7 +7,7 @@ using Utility.ADL;
 namespace Utility.CommandRunner
 {
     /// <summary>
-    /// Contains the Logic for Running Commands
+    ///     Contains the Logic for Running Commands
     /// </summary>
     public class Runner
     {
@@ -17,7 +17,7 @@ namespace Utility.CommandRunner
         private static ADLLogger<LogType> _logger;
 
         /// <summary>
-        /// All Commands currently loaded in the Library
+        ///     All Commands currently loaded in the Library
         /// </summary>
         private readonly List<AbstractCommand> Commands = new List<AbstractCommand>();
 
@@ -25,7 +25,7 @@ namespace Utility.CommandRunner
             _logger ?? (_logger = new ADLLogger<LogType>(CommandRunnerDebugConfig.Settings, "Runner"));
 
         /// <summary>
-        /// Count of the Loaded Commands.
+        ///     Count of the Loaded Commands.
         /// </summary>
         public int _CommandCount => Commands.Count;
 
@@ -37,7 +37,7 @@ namespace Utility.CommandRunner
         }
 
         /// <summary>
-        /// Adds an Assemblys Commands by its Full Path
+        ///     Adds an Assemblys Commands by its Full Path
         /// </summary>
         /// <param name="path">Full path to assembly.</param>
         public void _AddAssembly(string path)
@@ -55,7 +55,7 @@ namespace Utility.CommandRunner
         }
 
         /// <summary>
-        /// Adds an Assemblys Commands
+        ///     Adds an Assemblys Commands
         /// </summary>
         /// <param name="asm">Assembly to Add</param>
         public void _AddAssembly(Assembly asm)
@@ -73,7 +73,7 @@ namespace Utility.CommandRunner
         }
 
         /// <summary>
-        /// Adds a Single Command to the System.
+        ///     Adds a Single Command to the System.
         /// </summary>
         /// <param name="cmd"></param>
         public void _AddCommand(AbstractCommand cmd)
@@ -121,7 +121,7 @@ namespace Utility.CommandRunner
         }
 
         /// <summary>
-        /// Checks if the system is already containing a command with the same command keys
+        ///     Checks if the system is already containing a command with the same command keys
         /// </summary>
         /// <param name="cmd">The Command</param>
         /// <returns>Returns true when interfering with other commands.</returns>
@@ -145,7 +145,7 @@ namespace Utility.CommandRunner
         }
 
         /// <summary>
-        /// Returns the command at index.
+        ///     Returns the command at index.
         /// </summary>
         /// <param name="index">The index</param>
         /// <returns>Command at index.</returns>
@@ -161,7 +161,7 @@ namespace Utility.CommandRunner
         }
 
         /// <summary>
-        /// Runs the Commands with the Passed arguments.
+        ///     Runs the Commands with the Passed arguments.
         /// </summary>
         /// <param name="args">The arguments to use</param>
         public bool _RunCommands(string[] args)

@@ -1,18 +1,18 @@
 ﻿namespace Utility.Expressions.Enums
 {
     /// <summary>
-    /// Defines the Different parser Syntax
+    ///     Defines the Different parser Syntax
     /// </summary>
     public enum ParserSyntax
     {
 
         /// <summary>
-        /// C# Syntax
+        ///     C# Syntax
         /// </summary>
         CSharp,
 
         /// <summary>
-        /// Visual Basic Syntax
+        ///     Visual Basic Syntax
         /// </summary>
         VisualBasic
 

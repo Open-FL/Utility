@@ -7,33 +7,33 @@ using Utility.Expressions.OPCodes;
 namespace Utility.Expressions
 {
     /// <summary>
-    /// The Main Class of the Evaluator.
+    ///     The Main Class of the Evaluator.
     /// </summary>
     public class Evaluator
     {
 
         /// <summary>
-        /// If True all Variables and Functions will be matched in case sensitive
+        ///     If True all Variables and Functions will be matched in case sensitive
         /// </summary>
         public readonly bool CaseSensitive;
 
         /// <summary>
-        /// Defines the Parser Syntax of the Evaluator
+        ///     Defines the Parser Syntax of the Evaluator
         /// </summary>
         public readonly ParserSyntax Syntax;
 
         /// <summary>
-        /// The List of Classes that Inherit IVariableBack and/or IEvalFunctions
+        ///     The List of Classes that Inherit IVariableBack and/or IEvalFunctions
         /// </summary>
         internal ArrayList mEnvironmentFunctionsList;
 
         /// <summary>
-        /// If true will throw an exception when a parameter/function is not found.
+        ///     If true will throw an exception when a parameter/function is not found.
         /// </summary>
         public bool RaiseVariableNotFoundException;
 
         /// <summary>
-        /// Public Constructor
+        ///     Public Constructor
         /// </summary>
         /// <param name="syntax">Evaluator Syntax</param>
         /// <param name="caseSensitive">If True all Variables and Functions will be matched in case sensitive</param>
@@ -45,7 +45,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Adds an Object to the List of Environment Functions/Variables.
+        ///     Adds an Object to the List of Environment Functions/Variables.
         /// </summary>
         /// <param name="obj">Object to Add</param>
         public void AddEnvironmentFunctions(object obj)
@@ -62,7 +62,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Removes an Object from the List of Environment Functions/Variables.
+        ///     Removes an Object from the List of Environment Functions/Variables.
         /// </summary>
         /// <param name="obj">Object to Remove</param>
         public void RemoveEnvironmentFunctions(object obj)
@@ -74,7 +74,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Parses the Specifed Expression
+        ///     Parses the Specifed Expression
         /// </summary>
         /// <param name="str">The Expression to Parse</param>
         /// <returns>Parsed Expression</returns>
@@ -84,7 +84,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Converts an Object to its string representation
+        ///     Converts an Object to its string representation
         /// </summary>
         /// <param name="value">Object to convert</param>
         /// <returns>Converted Value</returns>

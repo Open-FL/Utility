@@ -12,6 +12,8 @@ using Utility.ExtPP.Base.Plugins;
 using Utility.ExtPP.Base.settings;
 using Utility.FastString;
 
+using Utils = Utility.ExtPP.Base.Utils;
+
 namespace Utility.ExtPP.Plugins
 {
     public class ConditionalPlugin : AbstractFullScriptPlugin
@@ -370,14 +372,14 @@ namespace Utility.ExtPP.Plugins
                              line.StartsWith(DefineKeyword))
                     {
                         Logger.Log(LogType.Log, $"Found a {DefineKeyword} Statement", PLUGIN_MIN_SEVERITY + 2);
-                        defs.Set(Base.Utils.SplitAndRemoveFirst(line, Separator));
+                        defs.Set(Utils.SplitAndRemoveFirst(line, Separator));
                         solvedFile.Add(lastPass[i]);
                     }
                     else if (EnableUndefine &&
                              line.StartsWith(UndefineKeyword))
                     {
                         Logger.Log(LogType.Log, $"Found a {UndefineKeyword} Statement", PLUGIN_MIN_SEVERITY + 2);
-                        defs.Unset(Base.Utils.SplitAndRemoveFirst(line, Separator));
+                        defs.Unset(Utils.SplitAndRemoveFirst(line, Separator));
                         solvedFile.Add(lastPass[i]);
                     }
                     else
@@ -473,7 +475,7 @@ namespace Utility.ExtPP.Plugins
 
         private bool EvaluateConditional(string expression, IDefinitions defs)
         {
-            string condition = FixCondition(Base.Utils.SplitAndRemoveFirst(expression, Separator).Unpack(Separator));
+            string condition = FixCondition(Utils.SplitAndRemoveFirst(expression, Separator).Unpack(Separator));
 
             string[] cs = condition.Pack(Separator).ToArray();
             return EvaluateConditional(cs, defs);
@@ -572,7 +574,7 @@ namespace Utility.ExtPP.Plugins
             r = SurroundWithSpaces(r, AndOperator);
             r = SurroundWithSpaces(r, "(");
             r = SurroundWithSpaces(r, ")");
-            string rr = Base.Utils.RemoveExcessSpaces(r, Separator);
+            string rr = Utils.RemoveExcessSpaces(r, Separator);
 
             Logger.Log(LogType.Log, $"Fixed condition(new): {rr}", PLUGIN_MIN_SEVERITY + 7);
             return rr;

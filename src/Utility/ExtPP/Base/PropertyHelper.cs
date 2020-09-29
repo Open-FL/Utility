@@ -8,7 +8,7 @@ namespace Utility.ExtPP.Base
     {
 
         /// <summary>
-        /// Returns the field info of name in the type t
+        ///     Returns the field info of name in the type t
         /// </summary>
         /// <param name="t">Type of the containing class</param>
         /// <param name="name">name of the field</param>
@@ -19,7 +19,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// Returns the field info of name in the type t
+        ///     Returns the field info of name in the type t
         /// </summary>
         /// <param name="t">Type of the containing class</param>
         /// <param name="name">name of the property</param>
@@ -35,7 +35,7 @@ namespace Utility.ExtPP.Base
     {
 
         /// <summary>
-        /// Returns the property info of type t using lambda functions
+        ///     Returns the property info of type t using lambda functions
         /// </summary>
         /// <typeparam name="TValue">The type of the property</typeparam>
         /// <param name="selector">The selector for the property</param>
@@ -47,7 +47,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// Returns the member info of type t using lambda functions
+        ///     Returns the member info of type t using lambda functions
         /// </summary>
         /// <typeparam name="TValue">The type of the member</typeparam>
         /// <param name="selector">The selector for the member</param>
@@ -70,7 +70,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// Returns the field info of type t using lambda functions
+        ///     Returns the field info of type t using lambda functions
         /// </summary>
         /// <typeparam name="TValue">The type of the field</typeparam>
         /// <param name="selector">The selector for the field</param>

@@ -17,7 +17,7 @@ namespace Utility.Collections.Smoothing
 
 
         /// <summary>
-        /// A really fast line smoothing algorithm that works for n dimensions
+        ///     A really fast line smoothing algorithm that works for n dimensions
         /// </summary>
         /// <param name="pts"></param>
         /// <param name="smoothness"></param>

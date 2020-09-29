@@ -7,7 +7,7 @@ using Utility.ADL;
 namespace Utility.CommandRunner
 {
     /// <summary>
-    /// Abstract Command Class that contains all the info for a Command.
+    ///     Abstract Command Class that contains all the info for a Command.
     /// </summary>
     public abstract class AbstractCommand : ALoggable<LogType>
     {
@@ -15,7 +15,7 @@ namespace Utility.CommandRunner
         protected const int MIN_COMMAND_SEVERITY = 3;
 
         /// <summary>
-        /// Protected Constructor
+        ///     Protected Constructor
         /// </summary>
         /// <param name="action">Command Implementation</param>
         /// <param name="keys">Keys of the Command</param>
@@ -35,7 +35,7 @@ namespace Utility.CommandRunner
         }
 
         /// <summary>
-        /// Protected Constructor
+        ///     Protected Constructor
         /// </summary>
         /// <param name="keys">Keys of the Command</param>
         /// <param name="helpText">Optional Help Text</param>
@@ -50,22 +50,22 @@ namespace Utility.CommandRunner
         }
 
         /// <summary>
-        /// The Command Implementation that is getting called
+        ///     The Command Implementation that is getting called
         /// </summary>
         public Action<StartupArgumentInfo, string[]> CommandAction { get; protected set; }
 
         /// <summary>
-        /// The Keys that are used to indicate that the Command should be executed.
+        ///     The Keys that are used to indicate that the Command should be executed.
         /// </summary>
         public string[] CommandKeys { get; }
 
         /// <summary>
-        /// Optional Help text that can be used to create a help command.
+        ///     Optional Help text that can be used to create a help command.
         /// </summary>
         public string HelpText { get; }
 
         /// <summary>
-        /// When set to true, the parameters that do not have a command key infront of it will be passed to this command.
+        ///     When set to true, the parameters that do not have a command key infront of it will be passed to this command.
         /// </summary>
         public bool DefaultCommand { get; }
 
@@ -84,7 +84,7 @@ namespace Utility.CommandRunner
         }
 
         /// <summary>
-        /// To String Override, displaying the Help Text and other useful information.
+        ///     To String Override, displaying the Help Text and other useful information.
         /// </summary>
         /// <returns>String Representation of the Command.</returns>
         public override string ToString()

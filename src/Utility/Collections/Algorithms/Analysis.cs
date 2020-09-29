@@ -4,7 +4,7 @@
     {
 
         /// <summary>
-        /// Finds the largest sub array in the give array
+        ///     Finds the largest sub array in the give array
         /// </summary>
         /// <param name="array"></param>
         /// <param name="start"></param>
@@ -37,7 +37,7 @@
         }
 
         /// <summary>
-        /// Finds the largest sub array in the give array
+        ///     Finds the largest sub array in the give array
         /// </summary>
         /// <param name="array"></param>
         /// <param name="start"></param>

@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 namespace Utility.ExtPP.Base
 {
     /// <summary>
-    /// A Struct that contains all the information about the plugin
+    ///     A Struct that contains all the information about the plugin
     /// </summary>
     [Serializable]
     public class CommandMetaData
@@ -15,7 +15,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="command"></param>
         /// <param name="shortcut"></param>
@@ -30,33 +30,33 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// The help text of the Command
+        ///     The help text of the Command
         /// </summary>
         [XmlElement]
         public string HelpText { get; set; }
 
         /// <summary>
-        /// The shortcut for the command
-        /// Can be accessed with -
+        ///     The shortcut for the command
+        ///     Can be accessed with -
         /// </summary>
         [XmlElement]
         public string ShortCut { get; set; }
 
         /// <summary>
-        /// If this parameter can be set by a global prefix
+        ///     If this parameter can be set by a global prefix
         /// </summary>
         [XmlElement]
         public bool IncludeGlobal { get; set; }
 
         /// <summary>
-        /// The command.
-        /// Can be accessed with --
+        ///     The command.
+        ///     Can be accessed with --
         /// </summary>
         [XmlElement]
         public string Command { get; set; }
 
         /// <summary>
-        /// Writes the meta data as readable text.
+        ///     Writes the meta data as readable text.
         /// </summary>
         /// <returns></returns>
         public override string ToString()

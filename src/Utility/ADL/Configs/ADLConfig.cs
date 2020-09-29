@@ -28,7 +28,7 @@ namespace Utility.ADL.Configs
 
 
         /// <summary>
-        /// The format ADL uses to convert a Time to a string representation
+        ///     The format ADL uses to convert a Time to a string representation
         /// </summary>
         public string TimeFormatString { get; set; }
 

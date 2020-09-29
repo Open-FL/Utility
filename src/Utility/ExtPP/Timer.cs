@@ -3,29 +3,29 @@
 namespace Utility.ExtPP
 {
     /// <summary>
-    /// A timer class used to measure time during compilation
+    ///     A timer class used to measure time during compilation
     /// </summary>
     public class Timer
     {
 
         /// <summary>
-        /// A internal static timer
+        ///     A internal static timer
         /// </summary>
         internal static Timer GlobalTimer { get; } = new Timer();
 
         /// <summary>
-        /// A static wrapper for the singleton(showing the total ellapsed milliseconds since assembly load.
+        ///     A static wrapper for the singleton(showing the total ellapsed milliseconds since assembly load.
         /// </summary>
         public static long MS => GlobalTimer.StopWatch.ElapsedMilliseconds;
 
         /// <summary>
-        /// The underlying stopwatch
+        ///     The underlying stopwatch
         /// </summary>
         private Stopwatch StopWatch { get; } = new Stopwatch();
 
 
         /// <summary>
-        /// Starts the Timer
+        ///     Starts the Timer
         /// </summary>
         public void Start()
         {
@@ -33,7 +33,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Resets and Starts the timer
+        ///     Resets and Starts the timer
         /// </summary>
         /// <returns>ellapsed milliseconds before reset</returns>
         public long Restart()
@@ -45,7 +45,7 @@ namespace Utility.ExtPP
         }
 
         /// <summary>
-        /// Resets the Timer.
+        ///     Resets the Timer.
         /// </summary>
         /// <returns>ellapsed milliseconds before reset</returns>
         public long Reset()

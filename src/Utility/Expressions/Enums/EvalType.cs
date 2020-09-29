@@ -1,38 +1,38 @@
 ﻿namespace Utility.Expressions.Enums
 {
     /// <summary>
-    /// The Evaluation Types that the Evaluator Supports.
+    ///     The Evaluation Types that the Evaluator Supports.
     /// </summary>
     public enum EvalType
     {
 
         /// <summary>
-        /// Unknown Evaluation Type
+        ///     Unknown Evaluation Type
         /// </summary>
         Unknown,
 
         /// <summary>
-        /// Double Evaluation Type
+        ///     Double Evaluation Type
         /// </summary>
         Number,
 
         /// <summary>
-        /// Boolean Evaluation Type
+        ///     Boolean Evaluation Type
         /// </summary>
         Boolean,
 
         /// <summary>
-        /// String Evaluation Type
+        ///     String Evaluation Type
         /// </summary>
         String,
 
         /// <summary>
-        /// Date Evaluation Type
+        ///     Date Evaluation Type
         /// </summary>
         Date,
 
         /// <summary>
-        /// Object Evaluation Type
+        ///     Object Evaluation Type
         /// </summary>
         Object
 

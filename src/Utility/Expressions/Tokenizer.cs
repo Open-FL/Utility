@@ -6,48 +6,48 @@ using Utility.Expressions.Enums;
 namespace Utility.Expressions
 {
     /// <summary>
-    /// The Tokenizer parses the Single Parts of the Expression to usable Tokens
+    ///     The Tokenizer parses the Single Parts of the Expression to usable Tokens
     /// </summary>
     public class Tokenizer
     {
 
         /// <summary>
-        /// Length of mString
+        ///     Length of mString
         /// </summary>
         private readonly int mLen;
 
         /// <summary>
-        /// The Current Expression
+        ///     The Current Expression
         /// </summary>
         private readonly string mString;
 
         /// <summary>
-        /// The Current Character that is beeing tokenized
+        ///     The Current Character that is beeing tokenized
         /// </summary>
         private char mCurChar;
 
         /// <summary>
-        /// The Current Position in the mString Expression
+        ///     The Current Position in the mString Expression
         /// </summary>
         private int mPos;
 
         /// <summary>
-        /// The Start Position of the next Tokenization
+        ///     The Start Position of the next Tokenization
         /// </summary>
         public int StartPos;
 
         /// <summary>
-        /// The Current Token Type
+        ///     The Current Token Type
         /// </summary>
         public TokenType TokenType;
 
         /// <summary>
-        /// The Value of the Current Token
+        ///     The Value of the Current Token
         /// </summary>
         public StringBuilder Value = new StringBuilder();
 
         /// <summary>
-        /// Internal Constructor
+        ///     Internal Constructor
         /// </summary>
         /// <param name="str">Expression</param>
         internal Tokenizer(string str)
@@ -59,7 +59,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Raises an Exception 
+        ///     Raises an Exception
         /// </summary>
         /// <param name="msg">The Error Message</param>
         /// <param name="ex">The Exception</param>
@@ -82,7 +82,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Gets Invoked when the Tokenizer Encounters an Unexpected Token in the Expression
+        ///     Gets Invoked when the Tokenizer Encounters an Unexpected Token in the Expression
         /// </summary>
         /// <param name="msg">The Error Message</param>
         internal void RaiseUnexpectedToken(string msg = null)
@@ -100,7 +100,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Gets Invoked when the Tokenizer encounters an Unexpected Operator
+        ///     Gets Invoked when the Tokenizer encounters an Unexpected Operator
         /// </summary>
         /// <param name="tt">The Token Type</param>
         /// <param name="valueLeft">The Value on the Left Side of the Operator</param>
@@ -133,7 +133,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Returns True if the current Character is an Operator
+        ///     Returns True if the current Character is an Operator
         /// </summary>
         /// <returns></returns>
         private bool IsOp()
@@ -149,7 +149,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Moves the Tokenizer to the Next Token
+        ///     Moves the Tokenizer to the Next Token
         /// </summary>
         public void NextToken()
         {
@@ -338,7 +338,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Moves the Tokenizer to the Next Character
+        ///     Moves the Tokenizer to the Next Character
         /// </summary>
         private void NextChar()
         {
@@ -364,7 +364,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Parses a Number from the Current Character
+        ///     Parses a Number from the Current Character
         /// </summary>
         private void ParseNumber()
         {
@@ -388,7 +388,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Parses an Identifier
+        ///     Parses an Identifier
         /// </summary>
         private void ParseIdentifier()
         {
@@ -452,7 +452,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Parses a String Value
+        ///     Parses a String Value
         /// </summary>
         /// <param name="inQuote">True if the String is Enclosed in Quotation Marks</param>
         private void ParseString(bool inQuote)
@@ -531,7 +531,7 @@ namespace Utility.Expressions
         }
 
         /// <summary>
-        /// Parses a DateTime Value
+        ///     Parses a DateTime Value
         /// </summary>
         private void ParseDate()
         {

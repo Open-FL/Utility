@@ -11,7 +11,7 @@ using Utility.IO.Callbacks;
 namespace Utility.ExtPP.Base
 {
     /// <summary>
-    /// A utility class that contains various string operations
+    ///     A utility class that contains various string operations
     /// </summary>
     public static class Utils
     {
@@ -20,7 +20,7 @@ namespace Utility.ExtPP.Base
             new ADLLogger<LogType>(ExtPPDebugConfig.Settings, "PP Utils");
 
         /// <summary>
-        /// The List of implemented parsers.
+        ///     The List of implemented parsers.
         /// </summary>
         private static readonly Dictionary<Type, TryParse> Parser = new Dictionary<Type, TryParse>
                                                                     {
@@ -32,8 +32,8 @@ namespace Utility.ExtPP.Base
                                                                     };
 
         /// <summary>
-        /// Removes all lines of the source that start with one of the statements
-        /// It takes care of possible indentations and spaces
+        ///     Removes all lines of the source that start with one of the statements
+        ///     It takes care of possible indentations and spaces
         /// </summary>
         /// <param name="source">the input source</param>
         /// <param name="statements">statements that need to be removed from the source</param>
@@ -61,7 +61,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// Removes all the excess spaces around the specified separator
+        ///     Removes all the excess spaces around the specified separator
         /// </summary>
         /// <param name="line">The line to operate on</param>
         /// <param name="separator">the separator to be used</param>
@@ -76,7 +76,7 @@ namespace Utility.ExtPP.Base
 
 
         /// <summary>
-        /// Replaces a keyword(single sequence of characters) with a replacement in the source lines supplied.
+        ///     Replaces a keyword(single sequence of characters) with a replacement in the source lines supplied.
         /// </summary>
         /// <param name="source">the source to operate on</param>
         /// <param name="replacement">the replacement sequence</param>
@@ -94,7 +94,7 @@ namespace Utility.ExtPP.Base
 
 
         /// <summary>
-        /// Returns true if the path is valid relative to the current path(the current script that is processed
+        ///     Returns true if the path is valid relative to the current path(the current script that is processed
         /// </summary>
         /// <param name="currentPath">the current path of the program</param>
         /// <param name="file">the relative file path</param>
@@ -110,7 +110,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// Returns true if the path is valid relative to the current path(the current script that is processed
+        ///     Returns true if the path is valid relative to the current path(the current script that is processed
         /// </summary>
         /// <param name="currentPath">the current path of the program</param>
         /// <param name="file">the relative file path</param>
@@ -127,7 +127,7 @@ namespace Utility.ExtPP.Base
 
 
         /// <summary>
-        /// Returns a list of lines where the line start with statement
+        ///     Returns a list of lines where the line start with statement
         /// </summary>
         /// <param name="source">the source to operate on</param>
         /// <param name="statement">the statement to be checked for</param>
@@ -138,7 +138,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// Returns true if the source starts with the statement
+        ///     Returns true if the source starts with the statement
         /// </summary>
         /// <param name="line">the line to operate on</param>
         /// <param name="statement">the statement to search for</param>
@@ -149,8 +149,8 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// Splits a line by the separator and removes the first entry
-        /// Gets used for include to just be able to get the path
+        ///     Splits a line by the separator and removes the first entry
+        ///     Gets used for include to just be able to get the path
         /// </summary>
         /// <param name="statement">The statement to operate on</param>
         /// <param name="separator">the separator used to split</param>
@@ -168,7 +168,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// Creates parser from type.
+        ///     Creates parser from type.
         /// </summary>
         /// <typeparam name="T">Resulting type of the parser</typeparam>
         /// <returns>The parser for type T</returns>
@@ -232,7 +232,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// generic version of parsing an array of string to array of T
+        ///     generic version of parsing an array of string to array of T
         /// </summary>
         /// <typeparam name="T">Target array type</typeparam>
         /// <param name="obj">the array of strings to cast</param>
@@ -245,7 +245,7 @@ namespace Utility.ExtPP.Base
 
 
         /// <summary>
-        /// non generic version of parsing an array of string to array of T
+        ///     non generic version of parsing an array of string to array of T
         /// </summary>
         /// <param name="t">The target type</param>
         /// <param name="obj">the array of strings to cast</param>
@@ -275,7 +275,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// parsing a string to object of type T
+        ///     parsing a string to object of type T
         /// </summary>
         /// <param name="t">The target type</param>
         /// <param name="obj">the string to cast</param>
@@ -293,7 +293,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// generic version of parsing a string to object of type T
+        ///     generic version of parsing a string to object of type T
         /// </summary>
         /// <typeparam name="T">Target array type</typeparam>
         /// <param name="obj">the array of strings to cast</param>
@@ -305,8 +305,8 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// Parses an input string to an enum.
-        /// Supports simple AND/OR operations and can be specified as digit and by name
+        ///     Parses an input string to an enum.
+        ///     Supports simple AND/OR operations and can be specified as digit and by name
         /// </summary>
         /// <param name="enu">The target type</param>
         /// <param name="input">the string to cast</param>
@@ -373,7 +373,7 @@ namespace Utility.ExtPP.Base
         }
 
         /// <summary>
-        /// A Delegate used to create different parsers
+        ///     A Delegate used to create different parsers
         /// </summary>
         /// <param name="val">the string input</param>
         /// <param name="value">the output of the parser</param>

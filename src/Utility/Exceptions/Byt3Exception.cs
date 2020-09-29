@@ -6,7 +6,7 @@ using Utility.ADL.Configs;
 namespace Utility.Exceptions
 {
     /// <summary>
-    /// Exception that the SuperClass of all exceptions that get thrown with logger.crash
+    ///     Exception that the SuperClass of all exceptions that get thrown with logger.crash
     /// </summary>
     public class Byt3Exception : ApplicationException
     {
@@ -23,7 +23,7 @@ namespace Utility.Exceptions
         protected readonly ADLLogger<LogType> Logger;
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="errorMessage">The message why this exception occurred</param>
         /// <param name="inner">Inner exeption</param>
@@ -33,7 +33,7 @@ namespace Utility.Exceptions
         }
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="errorMessage">The message why this exception occurred</param>
         public Byt3Exception(string errorMessage) : this(errorMessage, null)

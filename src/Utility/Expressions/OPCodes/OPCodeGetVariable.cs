@@ -7,18 +7,18 @@ using Utility.Expressions.Interfaces;
 namespace Utility.Expressions.OPCodes
 {
     /// <summary>
-    /// Implements Returning a Variable from a IEvalTypedValue interface
+    ///     Implements Returning a Variable from a IEvalTypedValue interface
     /// </summary>
     public class OPCodeGetVariable : OPCode
     {
 
         /// <summary>
-        /// The TypedValue Backing Field
+        ///     The TypedValue Backing Field
         /// </summary>
         private IEvalTypedValue _mParam1;
 
         /// <summary>
-        /// Public Constructor
+        ///     Public Constructor
         /// </summary>
         /// <param name="value">IEvalTypedValue to Get the Variable From</param>
         public OPCodeGetVariable(IEvalTypedValue value)
@@ -27,7 +27,7 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The TypedValue
+        ///     The TypedValue
         /// </summary>
         private IEvalTypedValue mParam1
         {
@@ -51,22 +51,22 @@ namespace Utility.Expressions.OPCodes
         }
 
         /// <summary>
-        /// The Variable Value
+        ///     The Variable Value
         /// </summary>
         public override object Value => mParam1.Value;
 
         /// <summary>
-        /// The Value System Type
+        ///     The Value System Type
         /// </summary>
         public override Type SystemType => mParam1.SystemType;
 
         /// <summary>
-        /// The Value Evaluator Type
+        ///     The Value Evaluator Type
         /// </summary>
         public override EvalType EvalType => mParam1.EvalType;
 
         /// <summary>
-        /// Gets Invoked when the parameter value changes.
+        ///     Gets Invoked when the parameter value changes.
         /// </summary>
         /// <param name="sender">The Sender of the Event</param>
         /// <param name="e">The Event Args</param>

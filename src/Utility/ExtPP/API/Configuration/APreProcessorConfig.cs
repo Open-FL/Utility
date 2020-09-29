@@ -11,7 +11,7 @@ using Utility.ExtPP.Base.settings;
 namespace Utility.ExtPP.API.Configuration
 {
     /// <summary>
-    /// Abstract PreProcessor Configuration
+    ///     Abstract PreProcessor Configuration
     /// </summary>
     public abstract class APreProcessorConfig : ALoggable<LogType>
     {

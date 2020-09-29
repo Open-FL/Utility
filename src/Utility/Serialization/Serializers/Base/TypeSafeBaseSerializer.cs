@@ -3,14 +3,14 @@
 namespace Utility.Serialization.Serializers.Base
 {
     /// <summary>
-    /// Default Implementation for the BaseSerializer.
-    /// Uses Type.AssemblyQualifiedName as Unique Type Key
+    ///     Default Implementation for the BaseSerializer.
+    ///     Uses Type.AssemblyQualifiedName as Unique Type Key
     /// </summary>
     public class TypeSafeBaseSerializer : ABaseSerializer
     {
 
         /// <summary>
-        /// Deserializes a BasePacket from the stream.
+        ///     Deserializes a BasePacket from the stream.
         /// </summary>
         /// <param name="s">Input Stream</param>
         /// <returns>Deserialized BasePacket</returns>
@@ -22,7 +22,7 @@ namespace Utility.Serialization.Serializers.Base
         }
 
         /// <summary>
-        /// Serializes a BasePacket to the Stream
+        ///     Serializes a BasePacket to the Stream
         /// </summary>
         /// <param name="s">Target Stream</param>
         /// <param name="obj">BasePacket to Serialize</param>
@@ -33,8 +33,8 @@ namespace Utility.Serialization.Serializers.Base
         }
 
         /// <summary>
-        /// Returns the Unique Key for each Type
-        /// using t.AssemblyQualifiedName
+        ///     Returns the Unique Key for each Type
+        ///     using t.AssemblyQualifiedName
         /// </summary>
         /// <param name="t">Type to generate key for</param>
         /// <returns>The Unique Key per type</returns>

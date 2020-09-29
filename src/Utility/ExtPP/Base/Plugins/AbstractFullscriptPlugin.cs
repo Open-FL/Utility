@@ -4,19 +4,19 @@ using Utility.ExtPP.Base.settings;
 namespace Utility.ExtPP.Base.Plugins
 {
     /// <summary>
-    /// Abstract Plugin but with OnLoad_FullScriptStage and OnMain_FullScriptStage overriden and fixed plugin type toggle
+    ///     Abstract Plugin but with OnLoad_FullScriptStage and OnMain_FullScriptStage overriden and fixed plugin type toggle
     /// </summary>
     public abstract class AbstractFullScriptPlugin : AbstractPlugin
     {
 
         /// <summary>
-        /// Specifies the plugin type. Fullscript or Line Script
+        ///     Specifies the plugin type. Fullscript or Line Script
         /// </summary>
         public override PluginType PluginTypeToggle { get; } = PluginType.FullScriptPlugin;
 
         /// <summary>
-        /// Gets called once on each file.
-        /// Looping Through All the Files
+        ///     Gets called once on each file.
+        ///     Looping Through All the Files
         ///     Looping Through All the plugins
         /// </summary>
         /// <param name="script">the current source script</param>
@@ -31,8 +31,8 @@ namespace Utility.ExtPP.Base.Plugins
         }
 
         /// <summary>
-        /// Gets called once on each file.
-        /// Looping Through All the Files
+        ///     Gets called once on each file.
+        ///     Looping Through All the Files
         ///     Looping Through All the plugins
         /// </summary>
         /// <param name="script">the current source script</param>
@@ -47,8 +47,8 @@ namespace Utility.ExtPP.Base.Plugins
         }
 
         /// <summary>
-        /// Gets called once on each file.
-        /// Looping Through All the Files
+        ///     Gets called once on each file.
+        ///     Looping Through All the Files
         ///     Looping Through All the plugins
         /// </summary>
         /// <param name="script">the current source script</param>

@@ -5,13 +5,13 @@ using Utility.ExtPP.Base.settings;
 namespace Utility.ExtPP.Base.Plugins
 {
     /// <summary>
-    /// AbstractLinePlugin but with preconfigured PluginTypeToggle, Process Stages and only one function for all passes.
+    ///     AbstractLinePlugin but with preconfigured PluginTypeToggle, Process Stages and only one function for all passes.
     /// </summary>
     public abstract class AbstractLinePlugin : AbstractPlugin
     {
 
         /// <summary>
-        /// Specifies the plugin type. Fullscript or Line Script
+        ///     Specifies the plugin type. Fullscript or Line Script
         /// </summary>
         public override PluginType PluginTypeToggle =>
             Order.ToLower(CultureInfo.InvariantCulture) == "after"
@@ -19,7 +19,7 @@ namespace Utility.ExtPP.Base.Plugins
                 : PluginType.LinePluginBefore;
 
         /// <summary>
-        /// Specifies the order on what "event" the plugin should execute
+        ///     Specifies the order on what "event" the plugin should execute
         /// </summary>
         public override ProcessStage ProcessStages =>
             Stage.ToLower(CultureInfo.InvariantCulture) == "onload"
@@ -31,7 +31,7 @@ namespace Utility.ExtPP.Base.Plugins
         public string Stage { get; set; } = "onfinishup";
 
         /// <summary>
-        /// Gets called once per line on each file.
+        ///     Gets called once per line on each file.
         /// </summary>
         /// <param name="source">the source line</param>
         /// <returns>The updated line</returns>
@@ -41,7 +41,7 @@ namespace Utility.ExtPP.Base.Plugins
         }
 
         /// <summary>
-        /// Gets called once per line on each file.
+        ///     Gets called once per line on each file.
         /// </summary>
         /// <param name="source">the source line</param>
         /// <returns>The updated line</returns>
@@ -51,7 +51,7 @@ namespace Utility.ExtPP.Base.Plugins
         }
 
         /// <summary>
-        /// Gets called once per line on each file.
+        ///     Gets called once per line on each file.
         /// </summary>
         /// <param name="source">the source line</param>
         /// <returns>The updated line</returns>
@@ -61,7 +61,7 @@ namespace Utility.ExtPP.Base.Plugins
         }
 
         /// <summary>
-        /// Gets called once per line on each file.
+        ///     Gets called once per line on each file.
         /// </summary>
         /// <param name="source">the source line</param>
         /// <returns>The updated line</returns>
