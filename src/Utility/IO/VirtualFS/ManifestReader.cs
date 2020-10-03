@@ -17,6 +17,8 @@ namespace Utility.IO.VirtualFS
     public static class ManifestReader
     {
 
+        public static IReadOnlyCollection<string> Files => _assemblyFiles.Keys.Select(UnSanitizeFilename).ToList().AsReadOnly();
+
         private static readonly ADLLogger<LogType> Logger =
             new ADLLogger<LogType>(ManifestIODebugConfig.Settings, "Manifest Reader");
 
@@ -349,6 +351,23 @@ namespace Utility.IO.VirtualFS
             }
 
             return false;
+        }
+
+
+        public static string[] AllFilesFromAssembly(Assembly asm)
+        {
+            if (!_loadedAssemblies.Contains(asm))
+            {
+                RegisterAssembly(asm);
+            }
+
+            if (!_loadedAssemblies.Contains(asm))
+            {
+                return new string[0];
+            }
+
+            return _assemblyFiles.Values.Where(x => x.Assembly == asm).Select(x => UnSanitizeFilename(x.ManifestFilepaths.First()))
+                                 .ToArray();
         }
 
         /// <summary>
