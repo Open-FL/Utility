@@ -366,7 +366,7 @@ namespace Utility.IO.VirtualFS
                 return new string[0];
             }
 
-            return _assemblyFiles.Values.Where(x => x.Assembly == asm).Select(x => UnSanitizeFilename(x.ManifestFilepaths.First()))
+            return _assemblyFiles.Where(x => x.Value.Assembly == asm).Select(x => UnSanitizeFilename(x.Key))
                                  .ToArray();
         }
 
