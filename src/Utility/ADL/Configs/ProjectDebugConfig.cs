@@ -5,6 +5,8 @@ namespace Utility.ADL.Configs
     public class ProjectDebugConfig : IProjectDebugConfig
     {
 
+        public static event Action<ProjectDebugConfig> OnConfigCreate = null;
+
         public ProjectDebugConfig(
             string projectName, int acceptMask, int minSeverity,
             PrefixLookupSettings lookupSettings)
@@ -13,6 +15,7 @@ namespace Utility.ADL.Configs
             AcceptMask = acceptMask;
             MinSeverity = minSeverity;
             PrefixLookupSettings = lookupSettings;
+            OnConfigCreate?.Invoke(this);
         }
 
         public string ProjectName { get; set; }
