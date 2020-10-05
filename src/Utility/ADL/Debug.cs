@@ -20,6 +20,8 @@ namespace Utility.ADL
 
         #region Private Variables
 
+        internal static int DefaultSeverity { get; set; } = int.MaxValue;
+
         /// <summary>
         ///     Flag to check wether this is the first execution.
         /// </summary>

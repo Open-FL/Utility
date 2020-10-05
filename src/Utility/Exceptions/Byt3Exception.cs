@@ -13,9 +13,8 @@ namespace Utility.Exceptions
 
         public static readonly ProjectDebugConfig<LogType, Verbosity> Settings =
             new ProjectDebugConfig<LogType, Verbosity>(
-                                                       "Utility.Exceptions",
+                                                       "Exception",
                                                        LogType.All,
-                                                       Verbosity.Level1,
                                                        PrefixLookupSettings.AddPrefixIfAvailable |
                                                        PrefixLookupSettings.OnlyOnePrefix
                                                       );

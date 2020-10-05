@@ -6,12 +6,11 @@ namespace Utility.ADL.Configs
     {
 
         public ProjectDebugConfig(
-            string projectName, int acceptMask, int minSeverity,
+            string projectName, int acceptMask,
             PrefixLookupSettings lookupSettings)
         {
             ProjectName = projectName;
             AcceptMask = acceptMask;
-            MinSeverity = minSeverity;
             PrefixLookupSettings = lookupSettings;
             OnConfigCreate?.Invoke(this);
         }
@@ -20,7 +19,13 @@ namespace Utility.ADL.Configs
 
         public int AcceptMask { get; set; }
 
-        public int MinSeverity { get; set; }
+        private int? minSeverity = null;
+
+        public int MinSeverity
+        {
+            get => minSeverity ?? Debug.DefaultSeverity;
+            set => minSeverity = value;
+        }
 
         public PrefixLookupSettings PrefixLookupSettings { get; set; }
 
@@ -80,12 +85,11 @@ namespace Utility.ADL.Configs
     {
 
         public ProjectDebugConfig(
-            string projectName, MaskType acceptMask, SeverityType minSeverity,
+            string projectName, MaskType acceptMask,
             PrefixLookupSettings lookupSettings)
         {
             ProjectName = projectName;
             AcceptMask = acceptMask;
-            MinSeverity = minSeverity;
             PrefixLookupSettings = lookupSettings;
         }
 
@@ -93,7 +97,13 @@ namespace Utility.ADL.Configs
 
         public MaskType AcceptMask { get; set; }
 
-        public SeverityType MinSeverity { get; set; }
+        private int? minSeverity = null;
+
+        public SeverityType MinSeverity
+        {
+            get => minSeverity != null ? (SeverityType)Enum.ToObject(typeof(SeverityType), minSeverity) : (SeverityType)Enum.ToObject(typeof(SeverityType), Debug.DefaultSeverity);
+            set => minSeverity = Convert.ToInt32(value);
+        }
 
         public PrefixLookupSettings PrefixLookupSettings { get; set; }
 
@@ -104,7 +114,7 @@ namespace Utility.ADL.Configs
 
         public virtual int GetMinSeverity()
         {
-            return Convert.ToInt32(MinSeverity);
+            return minSeverity??Debug.DefaultSeverity;
         }
 
         public virtual int GetAcceptMask()
@@ -124,12 +134,12 @@ namespace Utility.ADL.Configs
 
         public virtual void SetMinSeverity(int severity)
         {
-            MinSeverity = (SeverityType) Enum.ToObject(typeof(SeverityType), severity);
+            minSeverity = severity;
         }
 
         public virtual void SetAcceptMask(int mask)
         {
-            AcceptMask = (MaskType) Enum.ToObject(typeof(MaskType), mask);
+            AcceptMask = (MaskType)Enum.ToObject(typeof(MaskType), mask);
         }
 
         public virtual void SetPrefixLookupSettings(PrefixLookupSettings settings)
