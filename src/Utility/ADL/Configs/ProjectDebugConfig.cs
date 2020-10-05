@@ -12,7 +12,7 @@ namespace Utility.ADL.Configs
             ProjectName = projectName;
             AcceptMask = acceptMask;
             PrefixLookupSettings = lookupSettings;
-            OnConfigCreate?.Invoke(this);
+            Debug.ConfigCreated(this);
         }
 
         public string ProjectName { get; set; }
@@ -70,8 +70,6 @@ namespace Utility.ADL.Configs
             PrefixLookupSettings = settings;
         }
 
-        public static event Action<ProjectDebugConfig> OnConfigCreate;
-
         public override string ToString()
         {
             return ProjectName;
@@ -91,6 +89,7 @@ namespace Utility.ADL.Configs
             ProjectName = projectName;
             AcceptMask = acceptMask;
             PrefixLookupSettings = lookupSettings;
+            Debug.ConfigCreated(this);
         }
 
         public string ProjectName { get; set; }
