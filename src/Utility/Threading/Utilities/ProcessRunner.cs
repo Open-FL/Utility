@@ -9,7 +9,7 @@ namespace Utility.Threading.Utilities
     {
 
         private static readonly ADLLogger<LogType> Logger =
-            new ADLLogger<LogType>(UtilitiesThreadingDebugConfig.Settings, "Process Type");
+            new ADLLogger<LogType>(UtilitiesThreadingDebugConfig.Settings,"");
 
         public static bool IsWindows => RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
 

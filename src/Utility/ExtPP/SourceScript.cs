@@ -33,7 +33,7 @@ namespace Utility.ExtPP
         /// <param name="pluginCache">the plugin cache that is used.</param>
         public SourceScript(string separator, IFileContent path, ImportResult importInfo, bool isInline) : base(
              ExtPPDebugConfig
-                 .Settings
+                 .Settings, ""
             )
         {
             this.importInfo = importInfo;

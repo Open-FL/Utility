@@ -17,6 +17,7 @@ namespace Utility.ExtPP.Base.Plugins
 
         protected AbstractPlugin() : base(ExtPPDebugConfig.Settings)
         {
+            Logger.SetSubProjectName(Prefix.First());
         }
 
         /// <summary>

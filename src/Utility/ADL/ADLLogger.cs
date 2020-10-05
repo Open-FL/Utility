@@ -14,7 +14,7 @@ namespace Utility.ADL
             new Dictionary<IProjectDebugConfig, List<ADLLogger>>();
 
         private readonly IProjectDebugConfig ProjectDebugConfig;
-        private readonly string SubProjectName;
+        private string SubProjectName;
         private bool hasProcessedPrefixes;
 
         private Dictionary<int, string> prefixes = new Dictionary<int, string>();
@@ -83,10 +83,16 @@ namespace Utility.ADL
             string subp = "";
             if (!string.IsNullOrEmpty(SubProjectName))
             {
-                subp = $".{SubProjectName}";
+                subp = SubProjectName;
             }
 
-            Debug.Log(this, mask, $"[{ProjectDebugConfig.GetProjectName()}{subp}][S:{severity}]: {message}");
+            string sev = "";
+            if (Debug.ShowSeverity)
+            {
+                sev += $"[S:{severity}]";
+            }
+
+            Debug.Log(this, mask, $"[{ProjectDebugConfig.GetProjectName()}][{subp}][{sev}]: {message}");
         }
 
         public string GetMaskPrefix(BitMask mask)
@@ -141,6 +147,11 @@ namespace Utility.ADL
 
             hasProcessedPrefixes = true;
             return ret;
+        }
+
+        public void SetSubProjectName(string subProjectName)
+        {
+            SubProjectName = subProjectName;
         }
 
         public override string ToString()

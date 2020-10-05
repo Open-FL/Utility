@@ -27,7 +27,7 @@ namespace Utility.ExtPP
         /// </summary>
         private List<AbstractPlugin> plugins = new List<AbstractPlugin>();
 
-        public PreProcessor() : base(ExtPPDebugConfig.Settings)
+        public PreProcessor() : base(ExtPPDebugConfig.Settings, "")
         {
         }
 

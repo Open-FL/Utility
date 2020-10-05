@@ -17,7 +17,7 @@ namespace Utility.ExtPP.API
     {
 
         private static readonly ADLLogger<LogType> Logger =
-            new ADLLogger<LogType>(ExtPPDebugConfig.Settings, "TextProcessorAPI");
+            new ADLLogger<LogType>(ExtPPDebugConfig.Settings, "API");
 
         private static Dictionary<string, APreProcessorConfig> _configs;
 

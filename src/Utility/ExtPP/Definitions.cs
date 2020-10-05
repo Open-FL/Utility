@@ -29,7 +29,7 @@ namespace Utility.ExtPP
         ///     Creates a Definitions Object with predefined definitions
         /// </summary>
         /// <param name="definitions">the predefined definitions</param>
-        public Definitions(Dictionary<string, bool> definitions) : base(ExtPPDebugConfig.Settings)
+        public Definitions(Dictionary<string, bool> definitions) : base(ExtPPDebugConfig.Settings, "Defs")
         {
             this.definitions = definitions;
         }

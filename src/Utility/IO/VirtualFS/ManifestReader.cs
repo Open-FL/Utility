@@ -18,7 +18,7 @@ namespace Utility.IO.VirtualFS
     {
 
         private static readonly ADLLogger<LogType> Logger =
-            new ADLLogger<LogType>(ManifestIODebugConfig.Settings, "Manifest Reader");
+            new ADLLogger<LogType>(ManifestIODebugConfig.Settings, "MF-Reader");
 
         private static readonly Dictionary<string, AssemblyFile>
             _assemblyFiles = new Dictionary<string, AssemblyFile>();

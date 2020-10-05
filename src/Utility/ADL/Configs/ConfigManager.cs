@@ -13,7 +13,7 @@ namespace Utility.ADL.Configs
     {
 
         private static readonly ADLLogger<LogType> Logger =
-            new ADLLogger<LogType>(InternalADLProjectDebugConfig.Settings, "ConfigManager");
+            new ADLLogger<LogType>(InternalADLProjectDebugConfig.Settings, "");
 
 
         public static T GetDefault<T>() where T : AbstractADLConfig

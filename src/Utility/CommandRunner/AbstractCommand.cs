@@ -12,6 +12,17 @@ namespace Utility.CommandRunner
     public abstract class AbstractCommand : ALoggable<LogType>
     {
 
+        private static string GetCommandName(string key)
+        {
+            string ret = key;
+            while (ret.StartsWith("-"))
+            {
+                ret = ret.Substring(1);
+            }
+
+            return ret;
+        }
+
         protected const int MIN_COMMAND_SEVERITY = 3;
 
         /// <summary>
@@ -25,7 +36,7 @@ namespace Utility.CommandRunner
             Action<StartupArgumentInfo, string[]> action, string[] keys,
             string helpText = "No Help Text Available", bool defaultCommand = false) : base(
              CommandRunnerDebugConfig
-                 .Settings
+                 .Settings, GetCommandName(keys.First())
             )
         {
             CommandAction = action;
@@ -42,7 +53,7 @@ namespace Utility.CommandRunner
         /// <param name="defaultCommand">Flag that indicates if this command is a default command.</param>
         protected AbstractCommand(
             string[] keys, string helpText = "No Help Text Available",
-            bool defaultCommand = false) : base(CommandRunnerDebugConfig.Settings)
+            bool defaultCommand = false) : base(CommandRunnerDebugConfig.Settings, GetCommandName(keys.First()))
         {
             CommandKeys = keys;
             HelpText = helpText;

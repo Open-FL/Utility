@@ -10,7 +10,7 @@ namespace Utility.DotNet
     {
 
         public static readonly ADLLogger<LogType> Logger =
-            new ADLLogger<LogType>(UtilitiesDotNetDebugConfig.Settings, "DotNetHelper");
+            new ADLLogger<LogType>(UtilitiesDotNetDebugConfig.Settings, "Helper");
 
         public static void DotnetAction(
             string msbuildCommand, string targetCommand, string arguments,

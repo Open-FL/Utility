@@ -41,7 +41,7 @@ namespace Utility.ExtPP
         ///     Empty Constructor
         ///     Sets the compute scheme to the default(the file name)
         /// </summary>
-        public SourceManager(List<AbstractPlugin> pluginChain) : base(ExtPPDebugConfig.Settings)
+        public SourceManager(List<AbstractPlugin> pluginChain) : base(ExtPPDebugConfig.Settings, "")
         {
             SetComputingScheme(ComputeFileNameAndKey_Default);
         }

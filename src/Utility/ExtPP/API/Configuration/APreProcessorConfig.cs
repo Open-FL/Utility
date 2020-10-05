@@ -18,6 +18,7 @@ namespace Utility.ExtPP.API.Configuration
 
         protected APreProcessorConfig() : base(ExtPPDebugConfig.Settings)
         {
+            Logger.SetSubProjectName(FileExtension);
         }
 
         public abstract string FileExtension { get; }

@@ -15,7 +15,7 @@ namespace Utility.IO.VirtualFS
     {
 
         private static readonly ADLLogger<LogType> Logger =
-            new ADLLogger<LogType>(ManifestIODebugConfig.Settings, "File IOManager");
+            new ADLLogger<LogType>(ManifestIODebugConfig.Settings, "IO");
 
         /// <summary>
         ///     Returns true if the file exists on either the disk or in the assembly

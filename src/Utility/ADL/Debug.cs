@@ -29,7 +29,7 @@ namespace Utility.ADL
 
 
         private static readonly ADLLogger<LogType> InternalLogger =
-            new ADLLogger<LogType>(InternalADLProjectDebugConfig.Settings, "ADL_Internal");
+            new ADLLogger<LogType>(InternalADLProjectDebugConfig.Settings, "Internal");
 
         private static readonly object PrefixLock = new object();
 
@@ -75,6 +75,7 @@ namespace Utility.ADL
 
         #region Public Properties
         public static event Action<IProjectDebugConfig> OnConfigCreate;
+        public static bool ShowSeverity { get; set; }
 
         internal static void ConfigCreated(IProjectDebugConfig config)
         {
