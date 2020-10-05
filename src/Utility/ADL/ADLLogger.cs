@@ -92,7 +92,7 @@ namespace Utility.ADL
                 sev += $"[S:{severity}]";
             }
 
-            Debug.Log(this, mask, $"[{ProjectDebugConfig.GetProjectName()}][{subp}][{sev}]: {message}");
+            Debug.Log(this, mask, $"[{ProjectDebugConfig.GetProjectName()}][{subp}]{sev}: {message}");
         }
 
         public string GetMaskPrefix(BitMask mask)
