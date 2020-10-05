@@ -14,11 +14,11 @@ namespace Utility.ADL
 
         private static readonly Dictionary<Type, ADLLogger<T>> CreatedLoggers = new Dictionary<Type, ADLLogger<T>>();
 
-        protected ALoggable(IProjectDebugConfig settings)
+        protected ALoggable(IProjectDebugConfig settings, string name = null)
         {
             if (!CreatedLoggers.ContainsKey(GetType()))
             {
-                ADLLogger<T> l = new ADLLogger<T>(settings, GetType().Name);
+                ADLLogger<T> l = new ADLLogger<T>(settings, name ?? GetType().Name);
                 CreatedLoggers[GetType()] = l;
             }
         }
