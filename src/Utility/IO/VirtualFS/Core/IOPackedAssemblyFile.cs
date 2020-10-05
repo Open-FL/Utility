@@ -11,19 +11,19 @@ namespace Utility.IO.VirtualFS.Core
         private readonly AssetPointer _ptr;
 
         public IoPackedAssemblyFile(bool compressed, string packFilepath, AssetPointer ptr) : base(
-                                                                                                   compressed,
-                                                                                                   packFilepath,
-                                                                                                   null
-                                                                                                  )
+             compressed,
+             packFilepath,
+             null
+            )
         {
             _ptr = ptr;
         }
 
         public IoPackedAssemblyFile(bool compressed, string[] packFilepaths, AssetPointer ptr) : base(
-                                                                                                      compressed,
-                                                                                                      packFilepaths,
-                                                                                                      null
-                                                                                                     )
+             compressed,
+             packFilepaths,
+             null
+            )
         {
             _ptr = ptr;
         }

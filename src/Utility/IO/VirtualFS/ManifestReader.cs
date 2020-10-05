@@ -17,8 +17,6 @@ namespace Utility.IO.VirtualFS
     public static class ManifestReader
     {
 
-        public static IReadOnlyCollection<string> Files => _assemblyFiles.Keys.Select(UnSanitizeFilename).ToList().AsReadOnly();
-
         private static readonly ADLLogger<LogType> Logger =
             new ADLLogger<LogType>(ManifestIODebugConfig.Settings, "Manifest Reader");
 
@@ -27,6 +25,9 @@ namespace Utility.IO.VirtualFS
 
         private static readonly List<Assembly> _loadedAssemblies = new List<Assembly>();
         private static readonly List<string> _unpackedFiles = new List<string>();
+
+        public static IReadOnlyCollection<string> Files =>
+            _assemblyFiles.Keys.Select(UnSanitizeFilename).ToList().AsReadOnly();
 
         public static bool IsRegistered(Assembly asm)
         {

@@ -206,7 +206,7 @@ namespace Utility.Serialization
                 BaseSerializer.Serialize(baseStage, packet);
                 baseStage.CompleteWrite();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 ret = false;
             }

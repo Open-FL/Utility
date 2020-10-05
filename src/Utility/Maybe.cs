@@ -3,7 +3,7 @@
     public class Maybe<T>
     {
 
-        private T value;
+        private readonly T value;
 
         public Maybe(T value)
         {

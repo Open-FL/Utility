@@ -24,9 +24,9 @@ namespace Utility.CommandRunner
         protected AbstractCommand(
             Action<StartupArgumentInfo, string[]> action, string[] keys,
             string helpText = "No Help Text Available", bool defaultCommand = false) : base(
-                                                                                            CommandRunnerDebugConfig
-                                                                                                .Settings
-                                                                                           )
+             CommandRunnerDebugConfig
+                 .Settings
+            )
         {
             CommandAction = action;
             CommandKeys = keys;

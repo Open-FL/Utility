@@ -29,13 +29,10 @@ namespace Utility.IO.VirtualFS.Core
         /// <param name="manifestFilepath"></param>
         /// <param name="assembly"></param>
         public AssemblyFile(bool compression, string manifestFilepath, Assembly assembly) : this(
-                                                                                                 compression,
-                                                                                                 new[]
-                                                                                                 {
-                                                                                                     manifestFilepath
-                                                                                                 },
-                                                                                                 assembly
-                                                                                                )
+             compression,
+             new[] { manifestFilepath },
+             assembly
+            )
         {
         }
 

@@ -26,37 +26,37 @@ namespace Utility.ExtPP.Plugins
                                                                               "set-removekeyword",
                                                                               "k",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 BlankLineRemover
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 BlankLineRemovalKeyword
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       BlankLineRemover
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       BlankLineRemovalKeyword
+                                                                                   )
+                                                                                  ),
                                                                               "This will get inserted whenever a blank line is detected. This will be removed in the native cleanup of the PreProcessor"
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-order",
                                                                               "o",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 BlankLineRemover
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 Order)
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       BlankLineRemover
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       Order)
+                                                                                  ),
                                                                               "Sets the Line Order to be Executed BEFORE the Fullscripts or AFTER the Fullscripts"
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-stage",
                                                                               "ss",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 BlankLineRemover
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 Stage)
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       BlankLineRemover
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       Stage)
+                                                                                  ),
                                                                               "Sets the Stage Type of the Plugin to be Executed OnLoad or OnFinishUp"
                                                                              )
                                                           };

@@ -5,8 +5,6 @@ namespace Utility.ADL.Configs
     public class ProjectDebugConfig : IProjectDebugConfig
     {
 
-        public static event Action<ProjectDebugConfig> OnConfigCreate = null;
-
         public ProjectDebugConfig(
             string projectName, int acceptMask, int minSeverity,
             PrefixLookupSettings lookupSettings)
@@ -66,6 +64,8 @@ namespace Utility.ADL.Configs
         {
             PrefixLookupSettings = settings;
         }
+
+        public static event Action<ProjectDebugConfig> OnConfigCreate;
 
         public override string ToString()
         {

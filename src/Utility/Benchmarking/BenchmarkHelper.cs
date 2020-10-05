@@ -6,7 +6,7 @@ namespace Utility.Benchmarking
     public class BenchmarkHelper
     {
 
-        public static int RunNumber = 0;
+        public static int RunNumber;
 
         protected readonly string PerformanceFolder;
 

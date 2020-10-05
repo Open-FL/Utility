@@ -5,12 +5,13 @@ namespace Utility.CommandRunner.BuiltInCommands
     public class DefaultHelpCommand : AbstractCommand
     {
 
-        private Runner runner;
+        private readonly Runner runner;
+
         public DefaultHelpCommand(Runner instance, bool defaultCommand = false) : base(
-                                                                                       new[] { "--help", "-h", "-?" },
-                                                                                       "Prints this help text",
-                                                                                       defaultCommand
-                                                                                      )
+             new[] { "--help", "-h", "-?" },
+             "Prints this help text",
+             defaultCommand
+            )
         {
             runner = instance;
         }

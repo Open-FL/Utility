@@ -21,10 +21,7 @@ namespace Utility.ExtPP.API.Configuration
             {
                 new FakeGenericsPlugin(),
                 new IncludePlugin(),
-                new ConditionalPlugin
-                {
-                    EnableDefine = true
-                },
+                new ConditionalPlugin { EnableDefine = true },
                 new ExceptionPlugin(),
                 new MultiLinePlugin()
             };

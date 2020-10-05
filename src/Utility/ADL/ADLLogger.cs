@@ -155,9 +155,9 @@ namespace Utility.ADL
     {
 
         public ADLLogger(IProjectDebugConfig projectDebugConfig, string subProjectname = "") : base(
-                                                                                                    projectDebugConfig,
-                                                                                                    subProjectname
-                                                                                                   )
+             projectDebugConfig,
+             subProjectname
+            )
         {
         }
 

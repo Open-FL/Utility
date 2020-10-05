@@ -36,38 +36,38 @@ namespace Utility.ExtPP.Plugins
                                                                               "set-genkeyword",
                                                                               "g",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 FakeGenericsPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 GenericKeyword
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       FakeGenericsPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       GenericKeyword
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used when writing pseudo generic code."
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-separator",
                                                                               "s",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 FakeGenericsPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 Separator
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       FakeGenericsPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       Separator
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the separator that is used to separate different generic types"
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-stage",
                                                                               "ss",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 FakeGenericsPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 Stage)
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       FakeGenericsPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       Stage)
+                                                                                  ),
                                                                               "Sets the Stage Type of the Plugin to be Executed OnLoad or OnFinishUp"
                                                                              )
                                                           };

@@ -34,13 +34,13 @@ namespace Utility.ExtPP.Base
         /// <param name="field">the property info of the corresponding field</param>
         /// <param name="helpText">the help text of the command</param>
         public CommandInfo(string command, string shortcut, PropertyInfo field, string helpText) : this(
-                                                                                                        command,
-                                                                                                        shortcut,
-                                                                                                        field,
-                                                                                                        helpText,
-                                                                                                        null,
-                                                                                                        false
-                                                                                                       )
+             command,
+             shortcut,
+             field,
+             helpText,
+             null,
+             false
+            )
         {
         }
 

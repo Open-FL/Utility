@@ -52,64 +52,64 @@ namespace Utility.ExtPP.Plugins
                                                                               "set-stage",
                                                                               "ss",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 TextEncoderPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 Stage)
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       TextEncoderPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       Stage)
+                                                                                  ),
                                                                               "Sets the Stage Type of the Plugin to be Executed OnLoad or OnMain"
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-start-encode-keyword",
                                                                               "ssek",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 TextEncoderPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 BlockEncodeStartKeyword
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       TextEncoderPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       BlockEncodeStartKeyword
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used to open a Encode block"
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-end-encode-keyword",
                                                                               "seek",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 TextEncoderPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 BlockEncodeEndKeyword
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       TextEncoderPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       BlockEncodeEndKeyword
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used to end a Encode block"
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-start-decode-keyword",
                                                                               "ssdk",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 TextEncoderPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 BlockDecodeStartKeyword
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       TextEncoderPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       BlockDecodeStartKeyword
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used to open a Decode block"
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-end-decode-keyword",
                                                                               "sedk",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 TextEncoderPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 BlockDecodeEndKeyword
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       TextEncoderPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       BlockDecodeEndKeyword
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used to end a Decode block"
                                                                              )
                                                           };

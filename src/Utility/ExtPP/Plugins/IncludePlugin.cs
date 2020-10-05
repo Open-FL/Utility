@@ -33,39 +33,39 @@ namespace Utility.ExtPP.Plugins
                                                                               "set-include",
                                                                               "i",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 IncludePlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 IncludeKeyword
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       IncludePlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       IncludeKeyword
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used to include other files into the build process."
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-include-inline",
                                                                               "ii",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 IncludePlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 IncludeInlineKeyword
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       IncludePlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       IncludeInlineKeyword
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used to insert other files directly into the current file"
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-separator",
                                                                               "s",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 IncludePlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 Separator
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       IncludePlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       Separator
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the separator that is used to separate the include statement from the filepath"
                                                                              )
                                                           };

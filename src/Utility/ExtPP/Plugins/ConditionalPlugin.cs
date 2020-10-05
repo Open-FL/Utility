@@ -63,168 +63,168 @@ namespace Utility.ExtPP.Plugins
                                                                               "set-define",
                                                                               "d",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 ConditionalPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 DefineKeyword
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       ConditionalPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       DefineKeyword
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used to define variables during the compilation."
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-undefine",
                                                                               "u",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 ConditionalPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 UndefineKeyword
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       ConditionalPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       UndefineKeyword
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used to undefine previously defined variables during the compilation."
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-if",
                                                                               "if",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 ConditionalPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 StartCondition
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       ConditionalPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       StartCondition
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used to start a new condition block."
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-elseif",
                                                                               "elif",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 ConditionalPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 ElseIfCondition
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       ConditionalPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       ElseIfCondition
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used to continue a previously started condition block with another condition block."
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-else",
                                                                               "else",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 ConditionalPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 ElseCondition
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       ConditionalPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       ElseCondition
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used to start a new condition block that is taken when the previous blocks evaluated to false."
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-endif",
                                                                               "eif",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 ConditionalPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 EndCondition
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       ConditionalPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       EndCondition
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used to end a previously started condition block."
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-not",
                                                                               "n",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 ConditionalPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 NotOperator
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       ConditionalPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       NotOperator
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword that is used to negate an expression in if conditions."
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-and",
                                                                               "a",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 ConditionalPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 AndOperator
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       ConditionalPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       AndOperator
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword for the logical AND operator"
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-or",
                                                                               "o",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 ConditionalPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 OrOperator
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       ConditionalPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       OrOperator
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the keyword for the logical OR operator"
                                                                              ),
                                                               new CommandInfo(
                                                                               "enable-define",
                                                                               "eD",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 ConditionalPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 EnableDefine
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       ConditionalPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       EnableDefine
+                                                                                   )
+                                                                                  ),
                                                                               "Enables/Disables the detection of define statements(defines can still be set via the defines object/the command line)"
                                                                              ),
                                                               new CommandInfo(
                                                                               "enable-undefine",
                                                                               "eU",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 ConditionalPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 EnableUndefine
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       ConditionalPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       EnableUndefine
+                                                                                   )
+                                                                                  ),
                                                                               "Enables/Disables the detection of undefine statements"
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-stage",
                                                                               "ss",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 ConditionalPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 Stage)
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       ConditionalPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       Stage)
+                                                                                  ),
                                                                               "Sets the Stage Type of the Plugin to be Executed OnLoad or OnFinishUp"
                                                                              ),
                                                               new CommandInfo(
                                                                               "set-separator",
                                                                               "s",
                                                                               PropertyHelper.GetPropertyInfo(
-                                                                                                             typeof(
-                                                                                                                 ConditionalPlugin
-                                                                                                             ),
-                                                                                                             nameof(
-                                                                                                                 Separator
-                                                                                                             )
-                                                                                                            ),
+                                                                                   typeof(
+                                                                                       ConditionalPlugin
+                                                                                   ),
+                                                                                   nameof(
+                                                                                       Separator
+                                                                                   )
+                                                                                  ),
                                                                               "Sets the separator that is used to separate different generic types"
                                                                              )
                                                           };
@@ -265,12 +265,12 @@ namespace Utility.ExtPP.Plugins
                     {
                         Logger.Log(LogType.Log, $"Found a {StartCondition} Statement", PLUGIN_MIN_SEVERITY + 2);
                         KeyValuePair<bool, int> prep = PrepareForConditionalEvaluation(
-                                                                                       line,
-                                                                                       defs,
-                                                                                       lastPass,
-                                                                                       i,
-                                                                                       solvedFile
-                                                                                      );
+                             line,
+                             defs,
+                             lastPass,
+                             i,
+                             solvedFile
+                            );
 
                         elseIsValid = prep.Key;
                         i += prep.Value;
@@ -285,13 +285,13 @@ namespace Utility.ExtPP.Plugins
                         if (!expectEndOrIf && openIf > 0)
                         {
                             KeyValuePair<bool, int> prep = PrepareForConditionalEvaluation(
-                                                                                           line,
-                                                                                           defs,
-                                                                                           lastPass,
-                                                                                           i,
-                                                                                           solvedFile,
-                                                                                           !elseIsValid
-                                                                                          );
+                                 line,
+                                 defs,
+                                 lastPass,
+                                 i,
+                                 solvedFile,
+                                 !elseIsValid
+                                );
 
                             elseIsValid &= prep.Key;
                             i += prep.Value;
