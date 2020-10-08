@@ -12,17 +12,6 @@ namespace Utility.CommandRunner
     public abstract class AbstractCommand : ALoggable<LogType>
     {
 
-        private static string GetCommandName(string key)
-        {
-            string ret = key;
-            while (ret.StartsWith("-"))
-            {
-                ret = ret.Substring(1);
-            }
-
-            return ret;
-        }
-
         protected const int MIN_COMMAND_SEVERITY = 3;
 
         /// <summary>
@@ -36,7 +25,8 @@ namespace Utility.CommandRunner
             Action<StartupArgumentInfo, string[]> action, string[] keys,
             string helpText = "No Help Text Available", bool defaultCommand = false) : base(
              CommandRunnerDebugConfig
-                 .Settings, GetCommandName(keys.First())
+                 .Settings,
+             GetCommandName(keys.First())
             )
         {
             CommandAction = action;
@@ -79,6 +69,17 @@ namespace Utility.CommandRunner
         ///     When set to true, the parameters that do not have a command key infront of it will be passed to this command.
         /// </summary>
         public bool DefaultCommand { get; }
+
+        private static string GetCommandName(string key)
+        {
+            string ret = key;
+            while (ret.StartsWith("-"))
+            {
+                ret = ret.Substring(1);
+            }
+
+            return ret;
+        }
 
 
         public bool IsInterfering(AbstractCommand other)

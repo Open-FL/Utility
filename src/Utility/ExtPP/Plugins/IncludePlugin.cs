@@ -152,7 +152,8 @@ namespace Utility.ExtPP.Plugins
                 }
             }
 
-            string[] incs = Utils.FindStatements(source.ToArray(), IncludeKeyword).Where(x=>!Utils.IsStatement(x, IncludeInlineKeyword)).ToArray();
+            string[] incs = Utils.FindStatements(source.ToArray(), IncludeKeyword)
+                                 .Where(x => !Utils.IsStatement(x, IncludeInlineKeyword)).ToArray();
 
             foreach (string includes in incs)
             {

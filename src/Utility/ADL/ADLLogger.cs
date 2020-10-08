@@ -14,10 +14,10 @@ namespace Utility.ADL
             new Dictionary<IProjectDebugConfig, List<ADLLogger>>();
 
         private readonly IProjectDebugConfig ProjectDebugConfig;
-        private string SubProjectName;
         private bool hasProcessedPrefixes;
 
         private Dictionary<int, string> prefixes = new Dictionary<int, string>();
+        private string SubProjectName;
 
         /// <summary>
         ///     Dictionary of Prefixes for the corresponding Masks

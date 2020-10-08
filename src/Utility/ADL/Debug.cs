@@ -74,13 +74,16 @@ namespace Utility.ADL
         #endregion
 
         #region Public Properties
+
         public static event Action<IProjectDebugConfig> OnConfigCreate;
+
         public static bool ShowSeverity { get; set; }
 
         internal static void ConfigCreated(IProjectDebugConfig config)
         {
             OnConfigCreate?.Invoke(config);
         }
+
         /// <summary>
         ///     The Encoding that is going to be used by all text in ADL.
         /// </summary>

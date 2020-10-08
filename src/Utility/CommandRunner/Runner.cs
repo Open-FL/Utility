@@ -22,7 +22,7 @@ namespace Utility.CommandRunner
         private readonly List<AbstractCommand> Commands = new List<AbstractCommand>();
 
         private static ADLLogger<LogType> Logger =>
-            _logger ?? (_logger = new ADLLogger<LogType>(CommandRunnerDebugConfig.Settings, ""));
+            _logger ?? (_logger = new ADLLogger<LogType>(CommandRunnerDebugConfig.Settings));
 
         /// <summary>
         ///     Count of the Loaded Commands.

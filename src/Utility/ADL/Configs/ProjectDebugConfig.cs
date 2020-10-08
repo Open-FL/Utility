@@ -5,6 +5,8 @@ namespace Utility.ADL.Configs
     public class ProjectDebugConfig : IProjectDebugConfig
     {
 
+        private int? minSeverity;
+
         public ProjectDebugConfig(
             string projectName, int acceptMask,
             PrefixLookupSettings lookupSettings)
@@ -18,8 +20,6 @@ namespace Utility.ADL.Configs
         public string ProjectName { get; set; }
 
         public int AcceptMask { get; set; }
-
-        private int? minSeverity = null;
 
         public int MinSeverity
         {
@@ -82,6 +82,8 @@ namespace Utility.ADL.Configs
         where SeverityType : Enum
     {
 
+        private int? minSeverity;
+
         public ProjectDebugConfig(
             string projectName, MaskType acceptMask,
             PrefixLookupSettings lookupSettings)
@@ -96,11 +98,12 @@ namespace Utility.ADL.Configs
 
         public MaskType AcceptMask { get; set; }
 
-        private int? minSeverity = null;
-
         public SeverityType MinSeverity
         {
-            get => minSeverity != null ? (SeverityType)Enum.ToObject(typeof(SeverityType), minSeverity) : (SeverityType)Enum.ToObject(typeof(SeverityType), Debug.DefaultSeverity);
+            get =>
+                minSeverity != null
+                    ? (SeverityType) Enum.ToObject(typeof(SeverityType), minSeverity)
+                    : (SeverityType) Enum.ToObject(typeof(SeverityType), Debug.DefaultSeverity);
             set => minSeverity = Convert.ToInt32(value);
         }
 
@@ -113,7 +116,7 @@ namespace Utility.ADL.Configs
 
         public virtual int GetMinSeverity()
         {
-            return minSeverity??Debug.DefaultSeverity;
+            return minSeverity ?? Debug.DefaultSeverity;
         }
 
         public virtual int GetAcceptMask()
@@ -138,7 +141,7 @@ namespace Utility.ADL.Configs
 
         public virtual void SetAcceptMask(int mask)
         {
-            AcceptMask = (MaskType)Enum.ToObject(typeof(MaskType), mask);
+            AcceptMask = (MaskType) Enum.ToObject(typeof(MaskType), mask);
         }
 
         public virtual void SetPrefixLookupSettings(PrefixLookupSettings settings)

@@ -15,7 +15,6 @@ namespace Utility.ADL
         private static readonly Dictionary<Type, ADLLogger<T>> CreatedLoggers = new Dictionary<Type, ADLLogger<T>>();
 
 
-
         protected ALoggable(IProjectDebugConfig settings, string name = null)
         {
             if (!CreatedLoggers.ContainsKey(GetType()))

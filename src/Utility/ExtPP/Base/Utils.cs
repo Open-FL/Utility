@@ -17,7 +17,7 @@ namespace Utility.ExtPP.Base
     {
 
         private static readonly ADLLogger<LogType> Logger =
-            new ADLLogger<LogType>(ExtPPDebugConfig.Settings, "");
+            new ADLLogger<LogType>(ExtPPDebugConfig.Settings);
 
         /// <summary>
         ///     The List of implemented parsers.

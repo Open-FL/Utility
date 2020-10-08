@@ -136,8 +136,14 @@ namespace Utility.ExtPP
             if (!IsIncluded(script))
             {
                 AddFile(script, false, script.IsInline);
-                if (script.IsInline) doneState.Insert(0, ProcessStage.Queued);
-                else doneState.Add(ProcessStage.Queued);
+                if (script.IsInline)
+                {
+                    doneState.Insert(0, ProcessStage.Queued);
+                }
+                else
+                {
+                    doneState.Add(ProcessStage.Queued);
+                }
             }
         }
 
