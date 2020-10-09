@@ -56,7 +56,7 @@ namespace Utility.CommandRunner.BuiltInCommands.SetSettings
 
                 if (parts.Length > 2)
                 {
-                    parts[1] = parts.Reverse().Take(parts.Length - 2).Reverse().Unpack(":");
+                    parts[1] = parts.Reverse().Take(parts.Length - 1).Reverse().Unpack(":");
                 }
 
                 string root = fullpath.Substring(0, fullpath.IndexOf('.'));
