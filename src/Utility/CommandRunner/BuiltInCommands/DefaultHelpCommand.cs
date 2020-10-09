@@ -14,11 +14,11 @@ namespace Utility.CommandRunner.BuiltInCommands
             )
         {
             runner = instance;
+            CommandAction = (info, strings) => DefaultHelp();
         }
 
         public DefaultHelpCommand(bool defaultCommand = false) : this(null, defaultCommand)
         {
-            CommandAction = (info, strings) => DefaultHelp();
         }
 
         private void DefaultHelp()
