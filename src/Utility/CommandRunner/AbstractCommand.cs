@@ -12,7 +12,7 @@ namespace Utility.CommandRunner
     public abstract class AbstractCommand : ALoggable<LogType>
     {
 
-        protected static int MIN_COMMAND_SEVERITY = 3;
+        public static int MIN_COMMAND_SEVERITY = 3;
 
         /// <summary>
         ///     Protected Constructor
