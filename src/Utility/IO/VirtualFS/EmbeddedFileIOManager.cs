@@ -14,6 +14,9 @@ namespace Utility.IO.VirtualFS
     public class EmbeddedFileIOManager : IOCallback
     {
 
+        public static bool EnableFileSystem = true;
+        public static bool EnableManifest = true;
+
         private static readonly ADLLogger<LogType> Logger =
             new ADLLogger<LogType>(ManifestIODebugConfig.Settings, "IO");
 
@@ -24,8 +27,8 @@ namespace Utility.IO.VirtualFS
         /// <returns></returns>
         public bool FileExists(string filename)
         {
-            bool isFile = File.Exists(filename);
-            bool isManifest = ManifestReader.Exists(filename);
+            bool isFile = EnableFileSystem && File.Exists(filename);
+            bool isManifest = EnableManifest && ManifestReader.Exists(filename);
             return isFile || isManifest;
         }
 
@@ -36,8 +39,8 @@ namespace Utility.IO.VirtualFS
         /// <returns></returns>
         public bool DirectoryExists(string foldername)
         {
-            bool isFile = Directory.Exists(foldername);
-            bool isManifest = ManifestReader.DirectoryExists(foldername);
+            bool isFile = EnableFileSystem && Directory.Exists(foldername);
+            bool isManifest = EnableManifest && ManifestReader.DirectoryExists(foldername);
             return isFile || isManifest;
         }
 
@@ -102,13 +105,13 @@ namespace Utility.IO.VirtualFS
         /// <returns></returns>
         public Stream GetStream(string filename)
         {
-            if (File.Exists(filename))
+            if (EnableFileSystem && File.Exists(filename))
             {
                 Logger.Log(LogType.Log, filename + " Found in File System.", 5);
                 return File.OpenRead(filename);
             }
 
-            if (ManifestReader.Exists(filename))
+            if (EnableManifest && ManifestReader.Exists(filename))
             {
                 Logger.Log(LogType.Log, filename + " Found in Assembly Manifest.", 5);
                 return ManifestReader.GetStreamByPath(filename);
